@@ -30,7 +30,8 @@
     }
 
     &__image{
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         height: 200px;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
         clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
