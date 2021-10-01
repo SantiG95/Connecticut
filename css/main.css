@@ -8,6 +8,7 @@
 
 body {
   box-sizing: border-box;
+  background-color: chocolate;
 }
 
 .card {
@@ -120,6 +121,22 @@ body {
     top: 0;
     padding-left: 45%;
   }
+}
+
+#logo-nintendo {
+  height: 125px;
+}
+
+#logo-playstation {
+  height: 50px;
+}
+
+#logo-xbox {
+  height: 125px;
+}
+
+#logo-pc {
+  height: 75px;
 }
 
 /*********************************
@@ -254,6 +271,13 @@ body {
   bottom: 0.8em;
 }
 
+/*********************************
+            CARRITO
+*********************************/
+#carritoImagen {
+  height: 50px;
+}
+
 @media (max-width: 768px) {
   .main-header {
     flex-direction: column-reverse;
@@ -272,8 +296,9 @@ body {
   }
 }
 .section-cards {
-  background-color: #f1f2f3;
   padding: 1em;
+  margin-top: 100px;
+  text-align: center;
 }
 
 .card-container {
@@ -281,10 +306,6 @@ body {
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
-}
-
-.apartado {
-  margin-top: 100px;
 }
 
 .apartado-consolas,
@@ -297,4 +318,19 @@ body {
   .card-container {
     min-width: 230px;
   }
+}
+#apartado-nintendo {
+  background-color: red;
+}
+
+#apartado-playstation {
+  background-color: blue;
+}
+
+#apartado-xbox {
+  background-color: green;
+}
+
+#apartado-pc {
+  background-color: gray;
 }
