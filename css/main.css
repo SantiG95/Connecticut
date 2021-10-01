@@ -348,20 +348,20 @@ body {
 
 #apartado-nintendo {
   background-color: red;
-  background-image: url(../../img/fondo-nintendo.png);
+  background-image: url(../img/fondo-nintendo.png);
 }
 
 #apartado-playstation {
   background-color: blue;
-  background-image: url(../../img/fondo-playstation.png);
+  background-image: url(../img/fondo-playstation.png);
 }
 
 #apartado-xbox {
   background-color: green;
-  background-image: url(../../img/fondo-xbox.png);
+  background-image: url(../img/fondo-xbox.png);
 }
 
 #apartado-pc {
   background-color: gray;
-  background-image: url(../../img/fondo-pc.png);
+  background-image: url(../img/fondo-pc.png);
 }
