@@ -135,3 +135,19 @@
         }
     }
 }
+
+#cards__nintendo .card-container .card{
+    background-color: rgb(150, 0, 0);
+}
+
+#cards__playstation .card-container .card{
+    background-color: rgb(0, 0, 150);
+}
+
+#cards__xbox .card-container .card{
+    background-color: rgb(0, 50, 0);
+}
+
+#cards__pc .card-container .card{
+    background-color: rgb(50, 50, 50);
+}

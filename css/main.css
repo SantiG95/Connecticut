@@ -123,20 +123,40 @@ body {
   }
 }
 
+#cards__nintendo .card-container .card {
+  background-color: #960000;
+}
+
+#cards__playstation .card-container .card {
+  background-color: #000096;
+}
+
+#cards__xbox .card-container .card {
+  background-color: #003200;
+}
+
+#cards__pc .card-container .card {
+  background-color: #323232;
+}
+
 #logo-nintendo {
   height: 125px;
+  background-color: red;
 }
 
 #logo-playstation {
   height: 50px;
+  background-color: blue;
 }
 
 #logo-xbox {
   height: 125px;
+  background-color: green;
 }
 
 #logo-pc {
   height: 75px;
+  background-color: grey;
 }
 
 /*********************************
@@ -319,18 +339,29 @@ body {
     min-width: 230px;
   }
 }
+#apartado-nintendo,
+#apartado-playstation,
+#apartado-xbox,
+#apartado-pc {
+  background-attachment: fixed;
+}
+
 #apartado-nintendo {
   background-color: red;
+  background-image: url(../../img/fondo-nintendo.png);
 }
 
 #apartado-playstation {
   background-color: blue;
+  background-image: url(../../img/fondo-playstation.png);
 }
 
 #apartado-xbox {
   background-color: green;
+  background-image: url(../../img/fondo-xbox.png);
 }
 
 #apartado-pc {
   background-color: gray;
+  background-image: url(../../img/fondo-pc.png);
 }
