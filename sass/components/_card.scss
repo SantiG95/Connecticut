@@ -43,24 +43,50 @@
     }
 
     &:hover &__image{
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
-        clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
-        transform: scale(1.1) rotate(-2deg);
+        transform: scale(0.6);
+
+        
         transition-delay: 0s;
+        margin-top: -15%;
     }
 
     &__content{
-        position: absolute;
+        
         bottom: 0;
-        padding: 3em 1em 1em;
+        margin-top: -15%;
+        
         height: 230px;
         width: 100%;
         z-index: -1;
         transition: all .2s;
+        clip-path: polygon(51% 12%, 73% 9%, 100% 0, 100% 100%, 0 100%, 0 0, 21% 8%);
+
+
     }
 
     &:hover &__content{
-        padding-top: 4em;
+        padding-top: 1em;
+    }
+
+    &:hover .card__content{
+        margin-top: -20%;
+    }
+
+    & .card__heading{
+        padding-top: 10%;
+    }
+
+    &:hover .card__heading{
+        padding-top: 5%;
+    }
+
+    & .card__description{
+        margin-top: 50%;
+        transition: all .2s;
+    }
+
+    &:hover .card__description{
+        margin-top: 2%;
     }
 
     &:nth-child(10n + 1) &__content{

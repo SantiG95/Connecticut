@@ -58,22 +58,37 @@ body {
   transition: all 0.2s;
 }
 .card:hover .card__image {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
-  clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
-  transform: scale(1.1) rotate(-2deg);
+  transform: scale(0.6);
   transition-delay: 0s;
+  margin-top: -15%;
 }
 .card__content {
-  position: absolute;
   bottom: 0;
-  padding: 3em 1em 1em;
+  margin-top: -15%;
   height: 230px;
   width: 100%;
   z-index: -1;
   transition: all 0.2s;
+  clip-path: polygon(51% 12%, 73% 9%, 100% 0, 100% 100%, 0 100%, 0 0, 21% 8%);
 }
 .card:hover .card__content {
-  padding-top: 4em;
+  padding-top: 1em;
+}
+.card:hover .card__content {
+  margin-top: -20%;
+}
+.card .card__heading {
+  padding-top: 10%;
+}
+.card:hover .card__heading {
+  padding-top: 5%;
+}
+.card .card__description {
+  margin-top: 50%;
+  transition: all 0.2s;
+}
+.card:hover .card__description {
+  margin-top: 2%;
 }
 .card:nth-child(10n+1) .card__content {
   background-image: linear-gradient(to top, #b429f9, #26c5f3);
@@ -167,6 +182,11 @@ body {
 #logo-pc {
   height: 75px;
   background-color: grey;
+}
+
+#logo-pagina {
+  height: 100px;
+  padding: 0;
 }
 
 /*********************************
