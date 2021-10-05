@@ -28,6 +28,7 @@ body {
   -moz-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  border: 0px solid transparent;
 }
 .card:hover, .card:focus {
   -moz-transform: scale(1.03);
@@ -37,13 +38,12 @@ body {
   -webkit-transform-origin: bottom;
   transform-origin: bottom;
   box-shadow: 0px 7px 8px 4px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.01);
+  border: 10px solid silver;
 }
 .card__image {
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
-  clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
   background-position: center;
   transition: all 0.2s;
 }
@@ -317,8 +317,10 @@ body {
 }
 .section-cards {
   padding: 1em;
-  margin-top: 100px;
+  margin: 100px 30px;
   text-align: center;
+  border-radius: 30px;
+  background-attachment: fixed;
 }
 
 .card-container {
@@ -339,13 +341,6 @@ body {
     min-width: 230px;
   }
 }
-#apartado-nintendo,
-#apartado-playstation,
-#apartado-xbox,
-#apartado-pc {
-  background-attachment: fixed;
-}
-
 #apartado-nintendo {
   background-color: red;
   background-image: url(../img/fondo-nintendo.png);
