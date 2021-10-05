@@ -8,7 +8,10 @@
 
 body {
   box-sizing: border-box;
-  background-color: chocolate;
+  background-color: white;
+  background-image: url(../../img/fondo.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .card {
@@ -342,21 +345,21 @@ body {
   }
 }
 #apartado-nintendo {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.75);
   background-image: url(../img/fondo-nintendo.png);
 }
 
 #apartado-playstation {
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.75);
   background-image: url(../img/fondo-playstation.png);
 }
 
 #apartado-xbox {
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.75);
   background-image: url(../img/fondo-xbox.png);
 }
 
 #apartado-pc {
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.75);
   background-image: url(../img/fondo-pc.png);
 }
