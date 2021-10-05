@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 *,
 *::after,
 *::before {
@@ -14,12 +15,18 @@ body {
   background-size: cover;
 }
 
+#Mensaje_bienvenida,
+#Eslogan {
+  font-family: "Indie Flower", cursive;
+  font-size: 60px;
+}
+
 .card {
   outline: none;
   flex-grow: 1;
-  width: 220px;
-  max-width: 300px;
-  height: 400px;
+  width: 400px;
+  max-width: 500px;
+  height: 220px;
   overflow: hidden;
   display: block;
   position: relative;
@@ -362,4 +369,8 @@ body {
 #apartado-pc {
   background-color: rgba(128, 128, 128, 0.75);
   background-image: url(../img/fondo-pc.png);
+}
+
+#Bienvenida {
+  text-align: center;
 }
