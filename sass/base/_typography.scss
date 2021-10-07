@@ -2,8 +2,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
-#Mensaje_bienvenida,
-#Eslogan{
+#categorias__text{
     font-family: 'Indie Flower', cursive;
     font-size: 60px;
+    text-decoration: underline dotted;
+}
+
+#consola-text{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin: 20px 20% 20px 20%;
+}
+
+#juegos-text{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin: 20px 20% 20px 20%;
+}
+
+#amiibo-text{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin: 20px 20% 20px 20%;
+}
+
+#apartado-nintendo #consola-text,
+#apartado-nintendo #juegos-text,
+#apartado-nintendo #amiibo-text{
+    background-color: red;
+}
+
+#apartado-playstation #consola-text,
+#apartado-playstation #juegos-text{
+    background-color: blue;
+}
+
+#apartado-xbox #consola-text,
+#apartado-xbox #juegos-text{
+    background-color: green;
+}
+
+#apartado-pc #juegos-text{
+    background-color: grey;
+}
+
+#cantidad-productos{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
 }

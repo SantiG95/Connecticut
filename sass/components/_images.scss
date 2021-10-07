@@ -1,25 +1,35 @@
-#logo-nintendo{
-    height: 125px;
+.logo-nintendo,
+.logo-playstation,
+.logo-xbox,
+.logo-pc{
+    padding: 20px;
+    border: solid white 10px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 12px 2px rgba(255, 255, 255, 0.73);
+}
+
+
+.logo-nintendo{
+    height: 130px;
     background-color: red;
 
 }
 
-#logo-playstation{
-    height: 50px;
+.logo-playstation{
+    height: 130px;
     background-color: blue;
 }
 
-#logo-xbox{
-    height: 125px;
+.logo-xbox{
+    height: 130px;
     background-color: green;
 }
 
-#logo-pc{
-    height: 75px;
+.logo-pc{
+    height: 130px;
     background-color: grey;
 }
 
 #logo-pagina{
     height: 100px;
-    padding: 0;
 }

@@ -52,9 +52,21 @@
     </header>
 
     <main>
-        <div id="Bienvenida">
-            <p id="Mensaje_bienvenida">Bienvenidos a Connecticut</p>
-            <p id="Eslogan">El lugar donde se conectan las personas con los juegos</p>
+        <div id="categorias">
+            <p id="categorias__text">Categorias</p>
+            <a href="#apartado-nintendo">
+                <img id="logo-nintendo-categorias" class="logo-nintendo" src="img/logo-nintendo.png" alt="">
+            </a>
+            <a href="#apartado-playstation">
+                <img id="logo-playstation-categorias" class="logo-playstation" src="img/logo-playstation.png" alt="">
+            </a>
+            <a href="#apartado-xbox">
+                <img id="logo-xbox-categorias" class="logo-xbox" src="img/logo-xbox.png" alt="">
+            </a>
+            <a href="#apartado-pc">
+                <img id="logo-pc-categorias" class="logo-pc" src="img/logo-pc.png" alt="">
+            </a>
+
         </div>
 
         
@@ -62,12 +74,12 @@
         <section class="section-cards" id="apartado-nintendo">
 
             <header class="section-cards__header" >
-                <img id="logo-nintendo" class="logoMarca" src="img/logo-nintendo.jpg" alt="">
-                <p>Se encontraron X productos</p>
+                <img class="logo-nintendo" src="img/logo-nintendo.png" alt="">
+                <p id="cantidad-productos">Se encontraron X productos</p>
             </header>
 
             <div class="apartado-consolas" id="cards__nintendo">
-                <p>Consolas</p>
+                <p id="consola-text">Consolas</p>
                 <div class="card-container">
 
                     <a class="card" href="#">
@@ -251,7 +263,7 @@
             </div>
 
             <div class="apartado-juegos" id="cards__nintendo">
-                <p>Juegos</p>
+                <p id="juegos-text">Juegos</p>
                 <div class="card-container">
                     
                     <a class="card" href="#">
@@ -499,7 +511,7 @@
             </div>
 
             <div class="apartado-amiibo" id="cards__nintendo">
-                <p>Amiibo</p>
+                <p id="amiibo-text">Amiibo</p>
                 <div class="card-container">
 
                     <a class="card" href="#">
@@ -654,12 +666,12 @@
         <section class="section-cards"id="apartado-playstation">
 
             <header class="section-cards__header">
-                <img id="logo-playstation" class="logoMarca" src="img/logo-playstation.png" alt="">
-                <p>Se encontraron X productos</p>
+                <img class="logo-playstation" src="img/logo-playstation.png" alt="">
+                <p id="cantidad-productos">Se encontraron X productos</p>
             </header>
 
             <div class="apartado-consolas" id="cards__playstation">
-                <p>Consolas</p>
+                <p id="consola-text">Consolas</p>
                 <div class="card-container">
 
                     <a class="card" href="#">
@@ -746,7 +758,7 @@
             </div>
 
             <div class="apartado-juegos" id="cards__playstation">
-                <p>Juegos</p>
+                <p id="juegos-text">Juegos</p>
                 <div class="card-container">
 
                     <a class="card" href="#">
@@ -865,6 +877,22 @@
                         <article class="card__article">
                             <div 
                                 class="card__image"
+                                style="background-image: url('img/ps4-kingdomhearts.png');"
+                            >
+                            </div>
+    
+                            <div class="card__content">
+                                <h3 class="card__heading">Titulo</h3>
+                                <div class="card__description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div 
+                                class="card__image"
                                 style="background-image: url('img/ps4-back4blood.png');"
                             >
                             </div>
@@ -901,12 +929,12 @@
         <section class="section-cards" id="apartado-xbox">
 
             <header class="section-cards__header">
-                <img id="logo-xbox" class="logoMarca" src="img/logo-xbox.png" alt="">
-                <p>Se encontraron X productos</p>
+                <img class="logo-xbox" src="img/logo-xbox.png" alt="">
+                <p id="cantidad-productos">Se encontraron X productos</p>
             </header>
 
             <div class="apartado-consolas" id="cards__xbox">
-                <p>Consolas</p>
+                <p id="consola-text">Consolas</p>
                 <div class="card-container">
 
                     <a class="card" href="#">
@@ -993,7 +1021,7 @@
             </div>
 
             <div class="apartado-juegos" id="cards__xbox">
-                <p>Juegos</p>
+                <p id="juegos-text">Juegos</p>
                 <div class="card-container">
 
                     <a class="card" href="#">
@@ -1076,6 +1104,22 @@
                             </div>
                         </article>
                     </a>
+                    <a class="card" href="#">
+                        <article class="card__article">
+                            <div 
+                                class="card__image"
+                                style="background-image: url('img/xbox-kingdomhearts.jpg');"
+                            >
+                            </div>
+    
+                            <div class="card__content">
+                                <h3 class="card__heading">Titulo</h3>
+                                <div class="card__description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
                 </div>
             </div>
         </section>
@@ -1083,12 +1127,12 @@
         <section class="section-cards" id="apartado-pc">
 
             <header class="section-cards__header">
-                <img id="logo-pc" class="logoMarca" src="img/logo-pc.png" alt="">
-                <p>Se encontraron X productos</p>
+                <img class="logo-pc" src="img/logo-pc.png" alt="">
+                <p id="cantidad-productos">Se encontraron X productos</p>
             </header>
 
             <div class="apartado-juegos" id="cards__pc">
-                <p>Juegos</p>
+                <p id="juegos-text">Juegos</p>
                 <div class="card-container">
 
                     <a class="card" href="#">
@@ -1171,6 +1215,7 @@
                             </div>
                         </article>
                     </a>
+                    
                 </div>
             </div>
         </section>
