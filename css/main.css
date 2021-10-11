@@ -254,6 +254,8 @@ body {
 .logo-playstation,
 .logo-xbox,
 .logo-pc {
+  max-width: 100%;
+  max-height: 130px;
   padding: 20px;
   border: solid white 10px;
   border-radius: 50px;
@@ -261,22 +263,18 @@ body {
 }
 
 .logo-nintendo {
-  height: 130px;
   background-color: red;
 }
 
 .logo-playstation {
-  height: 130px;
   background-color: blue;
 }
 
 .logo-xbox {
-  height: 130px;
   background-color: green;
 }
 
 .logo-pc {
-  height: 130px;
   background-color: grey;
 }
 
