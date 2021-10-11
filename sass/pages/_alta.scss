@@ -1,0 +1,54 @@
+.alta_mensaje,
+.alta_form{
+    margin: 10px 5%;
+}
+
+.alta_mensaje{
+    font-family: 'Indie Flower', cursive;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.alta_form{
+    border: black 2px solid;
+    text-align: center;
+    box-shadow: 1px 1px 12px 2px rgba(0,0,0,0.73);
+    background-color: rgba(175, 152, 152, 0.815);
+}
+
+h1{
+    color: white;
+    padding: 2% 0;
+    background-color: rgb(143, 130, 130);
+}
+
+.div_alta{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 15%;
+}
+
+label,
+input,
+select,
+textarea{
+    font-size: 20px;
+    margin: 3% 0;
+}
+
+label{
+    font-weight: bold;
+}
+
+[type='checkbox']{
+    width: 20px;
+    height: 20px;
+}
+
+[type='submit'] {
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 3%;
+}

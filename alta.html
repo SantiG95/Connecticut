@@ -31,15 +31,14 @@
         </nav> 
         <div class="search-bar">
             <div class="search-bar__logo-container">
-                Logo
+                <img id="logo-pagina" src="img/logo.png" alt="logo">
             </div>
             <form class="search-bar__form-container">
-                <label class="search-bar__form-label" for="busqueda">Buscar</label>
-                <input class="search-bar__form-search" id="busqueda" type="search">
+                <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Buscar...">
                 <input class="search-bar__form-submit" type="submit" value="Buscar">
             </form>
             <div class="search-bar__carrito-container">
-                Carrito
+                <img id="carritoImagen" src="img/carrito.png" alt="Carrito">
             </div>
 
             <div class="menu-toggle">
@@ -51,5 +50,84 @@
             </div>
         </div>
     </header>
+    <main>
+        <p class="alta_mensaje">Si quieres vender un producto, rellena el siguiente formulario y 
+            nosotros nos encargaremos de que se ponga a la venta lo antes posible</p>
+        <form class="alta_form" action="alta.php">
+            <h1>Producto</h1>
+            <div class="div_alta">
+                <label for="nombreProducto">Nombre del producto:</label>
+                <input type="text" id="nombreProducto" name="nombreProducto" required placeholder="Nombre del producto">
+            </div>
+
+            <div class="div_alta">
+                <label for="marca">Marca o desarrollador:</label>
+                <input type="text" id="marca" name="marca" required placeholder="Marca o desarrollador">
+            </div>
+
+            <div class="div_alta">
+                <label for="precio">Precio de venta:</label>
+                <input type="number" id="precio" name="precio" required placeholder="Precio de venta" min="1">
+            </div>
+
+            <div class="div_alta">
+                <label for="stock">Stock a la venta:</label>
+                <input type="number" id="stock" name="stock" required value="Stock" placeholder="Stock" min="1">
+            </div>
+
+            <div class="div_alta">
+                <label for="descripcion">Descripcion:</label>
+                <textarea name="descripcion" id="descripcion" required cols="25" rows="5" placeholder="Descripcion del producto"></textarea>
+            </div>
+
+            <div class="div_alta">
+                <label for="categoria">Categoria:</label>
+                <select name="categoria" id="categoria" required>
+                    <option value="00" selected disabled>Selecciona una categoria...</option>
+                    <optgroup label="Nintendo">
+                        <option value="11">Consolas</option>
+                        <option value="12">Juegos</option>
+                        <option value="13">amiibo</option>
+                    </optgroup>
+                    <optgroup label="Playstation">
+                        <option value="21">Consolas</option>
+                        <option value="22">Juegos</option>
+                    </optgroup>
+                    <optgroup label="Xbox">
+                        <option value="31">Consolas</option>
+                        <option value="32">Juegos</option>
+                    </optgroup>
+                    <optgroup label="PC">
+                        <option value="42">Juegos</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="div_alta">
+                <label for="imagen">Imagen para mostrar:</label>
+                <input type="file" name="imagen" id="imagen" accept="image/png,image/jpeg" required>
+            </div>
+
+            <div class="div_alta">
+                <label for="envio_gratis">Tiene envio gratis:</label>
+                <input type="checkbox" name="envio_gratis" id="envio_gratis">
+            </div>
+
+            <h1>Vendedor</h1>
+            <div class="div_alta">
+                <label for="nombreVendedor">Nombre del vendedor:</label>
+                <input id="nombreVendedor" name="nombreVendedor" placeholder="Nombre del vendedor" required>
+            </div>
+
+            <div class="div_alta">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+
+    </main>
 </body>
 </html>
