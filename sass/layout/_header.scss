@@ -5,6 +5,8 @@
 .main-header{
     display: flex;
     flex-direction: column;
+    //background-color: rgb(207, 0, 0);
+    background-color: rgb(126, 109, 109);
 }
 
 #menu{
@@ -16,42 +18,53 @@
 }
 
 #menu:checked ~ .search-bar .menu-toggle__label{
-    background-color: yellow;
+    //background-color: yellow;
 }
 
 /*********************************
             NAV BAR
 *********************************/
 .nav-bar{
-    background-color: mediumturquoise;
+    font-size: 20px;
+    //background-color: mediumturquoise;
+
 }
 
 
 .nav-bar__nav-list{
     display: flex;
     list-style-type: none;
-    justify-content: center;
+    justify-content: space-around;
+    
 }
 
 .nav-bar__nav-item{
     text-align: center;
-    background-color: pink;
+    //background-color: pink;
 }
 
 .nav-bar__nav-link{
     display: block;
-    background-color: purple;
+    //background-color: purple;
     color: #fff;
+    //background-color: blue;
     padding: 1em 2em;
     text-decoration: none;
+    transition: all .2s;
+}
+
+.nav-bar__nav-link:hover{
+    font-weight: bold;
+    background-color: rgb(70, 64, 64);
+    
 }
 
 
 /*********************************
-            SEARCH BAR
+            SEARCH BAR height: 4em;
 *********************************/
 .search-bar{
-    background-color: olivedrab;
+    //background-color: olivedrab;
     display: flex;
     justify-content: space-between;
 }
@@ -63,32 +76,51 @@
 }
 
 .search-bar__logo-container{
-background-color: yellow;
+    //background-color: yellow;
 }
 
 .search-bar__form-container{
-background-color: gold;
-flex-basis: 100%;
-display: flex;
-justify-content: center;
+    //background-color: gold;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
 }
 
 .search-bar__form-label{
-    background-color: greenyellow;
+    //background-color: greenyellow;
 }
 
 .search-bar__form-search{
-    background-color: deeppink;
+    font-size: 30px;
+    background-color: rgb(224, 216, 216);
     width: 70%;
+    flex-basis: 100%;
 }
 
 .search-bar__form-submit{
-    background-color: darkslategray;
+    color: transparent;
+    font-size: 25px;
+    height: 40%;
+    background-color: transparent;
+    background: white;
+
+    background-image: url(../img/lupa-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30%;
+    
 }
 
 .search-bar__carrito-container{
+    display: flex;
     flex: 0 0 3em;
-    background-color: goldenrod;
+    justify-content: center;
+    align-items: center;
+    //background-color: goldenrod;
+    margin: 0 5%;
 }
 
 /*********************************

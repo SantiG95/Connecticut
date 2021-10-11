@@ -284,6 +284,7 @@ body {
 .main-header {
   display: flex;
   flex-direction: column;
+  background-color: #7e6d6d;
 }
 
 #menu {
@@ -294,41 +295,40 @@ body {
   display: block;
 }
 
-#menu:checked ~ .search-bar .menu-toggle__label {
-  background-color: yellow;
-}
-
 /*********************************
             NAV BAR
 *********************************/
 .nav-bar {
-  background-color: mediumturquoise;
+  font-size: 20px;
 }
 
 .nav-bar__nav-list {
   display: flex;
   list-style-type: none;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .nav-bar__nav-item {
   text-align: center;
-  background-color: pink;
 }
 
 .nav-bar__nav-link {
   display: block;
-  background-color: purple;
   color: #fff;
   padding: 1em 2em;
   text-decoration: none;
+  transition: all 0.2s;
+}
+
+.nav-bar__nav-link:hover {
+  font-weight: bold;
+  background-color: #464040;
 }
 
 /*********************************
-            SEARCH BAR
+            SEARCH BAR height: 4em;
 *********************************/
 .search-bar {
-  background-color: olivedrab;
   display: flex;
   justify-content: space-between;
 }
@@ -338,33 +338,40 @@ body {
   padding: 1em;
 }
 
-.search-bar__logo-container {
-  background-color: yellow;
-}
-
 .search-bar__form-container {
-  background-color: gold;
   flex-basis: 100%;
   display: flex;
   justify-content: center;
-}
-
-.search-bar__form-label {
-  background-color: greenyellow;
+  align-items: center;
+  padding: 0 10%;
 }
 
 .search-bar__form-search {
-  background-color: deeppink;
+  font-size: 30px;
+  background-color: #e0d8d8;
   width: 70%;
+  flex-basis: 100%;
 }
 
 .search-bar__form-submit {
-  background-color: darkslategray;
+  color: transparent;
+  font-size: 25px;
+  height: 40%;
+  background-color: transparent;
+  background: white;
+  background-image: url(../img/lupa-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30%;
 }
 
 .search-bar__carrito-container {
+  display: flex;
   flex: 0 0 3em;
-  background-color: goldenrod;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5%;
 }
 
 /*********************************
