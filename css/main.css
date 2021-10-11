@@ -72,6 +72,12 @@ body {
   color: black;
 }
 
+.alta_mensaje {
+  font-family: "Indie Flower", cursive;
+  font-size: 35px;
+  text-align: center;
+}
+
 .card {
   outline: none;
   flex-grow: 1;
@@ -276,6 +282,50 @@ body {
 
 #logo-pagina {
   height: 100px;
+}
+
+.contacto_form,
+.alta_form {
+  margin: 10% 5%;
+  border: black 2px solid;
+  text-align: center;
+  box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
+  background-color: rgba(175, 152, 152, 0.815);
+}
+.contacto_form h1,
+.alta_form h1 {
+  color: white;
+  padding: 2% 0;
+  background-color: #8f8282;
+}
+.contacto_form .div_form,
+.alta_form .div_form {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 15%;
+}
+.contacto_form label, .contacto_form input, .contacto_form select, .contacto_form textarea,
+.alta_form label,
+.alta_form input,
+.alta_form select,
+.alta_form textarea {
+  font-size: 20px;
+  margin: 3% 0;
+}
+.contacto_form label,
+.alta_form label {
+  font-weight: bold;
+}
+.contacto_form [type=checkbox],
+.alta_form [type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+.contacto_form [type=submit],
+.alta_form [type=submit] {
+  font-size: 30px;
+  padding: 5px;
+  margin-bottom: 3%;
 }
 
 /*********************************
@@ -497,57 +547,6 @@ body {
   padding: 30px;
 }
 
-.alta_mensaje,
-.alta_form {
-  margin: 10px 5%;
-}
-
 .alta_mensaje {
-  font-family: "Indie Flower", cursive;
-  font-size: 35px;
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.alta_form {
-  border: black 2px solid;
-  text-align: center;
-  box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
-  background-color: rgba(175, 152, 152, 0.815);
-}
-
-h1 {
-  color: white;
-  padding: 2% 0;
-  background-color: #8f8282;
-}
-
-.div_alta {
-  display: flex;
-  justify-content: space-between;
-  margin: 2% 15%;
-}
-
-label,
-input,
-select,
-textarea {
-  font-size: 20px;
-  margin: 3% 0;
-}
-
-label {
-  font-weight: bold;
-}
-
-[type=checkbox] {
-  width: 20px;
-  height: 20px;
-}
-
-[type=submit] {
-  font-size: 30px;
-  padding: 5px;
-  margin-bottom: 3%;
+  margin: 5% 5%;
 }

@@ -50,5 +50,26 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <form class="contacto_form" action="contacto.php">
+            <h1>Contacto</h1>
+            <div class="div_form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="div_form">
+                <label for="email">Email de contacto:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="div_form">
+                <label for="comentario">Comentario:</label>
+                <textarea name="comentario" id="comentario" cols="40" rows="5" required></textarea>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+    </main>
 </body>
 </html>
