@@ -301,7 +301,7 @@ body {
 
 .contacto_form,
 .alta_form {
-  margin: 10% 5%;
+  margin: 10% 15%;
   border: black 2px solid;
   text-align: center;
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
@@ -325,7 +325,7 @@ body {
 .alta_form select,
 .alta_form textarea {
   font-size: 20px;
-  margin: 3% 0;
+  margin: 0;
 }
 .contacto_form label,
 .alta_form label {
