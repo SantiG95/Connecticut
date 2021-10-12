@@ -147,48 +147,53 @@ body {
   -webkit-transform-origin: bottom;
   transform-origin: bottom;
   box-shadow: 0px 7px 8px 4px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.01);
-  border: 10px solid white;
   box-shadow: 1px 1px 12px 2px rgba(255, 255, 255, 0.73);
 }
 .card__image {
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
+  margin-left: -50%;
+  width: 100;
   background-position: center;
   transition: all 0.2s;
 }
 .card:hover .card__image {
-  transform: scale(0.6);
+  transform: scale(1.1) rotate(355deg);
   transition-delay: 0s;
-  margin-top: -15%;
 }
 .card__content {
-  bottom: 0;
-  margin-top: -15%;
+  margin-top: -40%;
+  margin-left: 50%;
   height: 230px;
-  width: 100%;
+  width: 50%;
   z-index: -1;
   transition: all 0.2s;
-  clip-path: polygon(51% 12%, 73% 9%, 100% 0, 100% 100%, 0 100%, 0 0, 21% 8%);
 }
-.card:hover .card__content {
-  padding-top: 1em;
-}
-.card:hover .card__content {
-  margin-top: -20%;
-}
-.card .card__heading {
-  padding-top: 10%;
+.card__content .card__heading {
+  padding: 4%;
+  font-weight: bold;
 }
 .card:hover .card__heading {
   padding-top: 5%;
 }
-.card .card__description {
-  margin-top: 50%;
-  transition: all 0.2s;
+.card__content .card__description {
+  height: 120px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card:hover .card__description {
-  margin-top: 2%;
+.card__content .card__price {
+  height: 50px;
+  background-color: #e4990f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__content .card__price p {
+  font-size: 30px;
 }
 @media (min-width: 1024px) {
   .card {
@@ -218,8 +223,17 @@ body {
   }
 }
 
+#cards__nintendo .card-container .card,
+#cards__playstation .card-container .card,
+#cards__xbox .card-container .card,
+#cards__pc .card-container .card {
+  background-attachment: fixed;
+  background-position: right;
+}
+
 #cards__nintendo .card-container .card {
-  background-color: darkred;
+  background-color: #c20000;
+  background-image: url(../img/fondo-nintendo.png);
 }
 
 #cards__nintendo .card__content {
@@ -227,7 +241,8 @@ body {
 }
 
 #cards__playstation .card-container .card {
-  background-color: #000096;
+  background-color: #0000af;
+  background-image: url(../img/fondo-playstation.png);
 }
 
 #cards__playstation .card__content {
@@ -235,7 +250,8 @@ body {
 }
 
 #cards__xbox .card-container .card {
-  background-color: #003200;
+  background-color: #005c00;
+  background-image: url(../img/fondo-xbox.png);
 }
 
 #cards__xbox .card__content {
@@ -243,7 +259,8 @@ body {
 }
 
 #cards__pc .card-container .card {
-  background-color: #323232;
+  background-color: #505050;
+  background-image: url(../img/fondo-pc.png);
 }
 
 #cards__pc .card__content {
@@ -498,6 +515,7 @@ body {
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
   margin-right: 10%;
   margin-left: 10%;
+  background-color: rgba(175, 152, 152, 0.815);
 }
 
 .card-container {
@@ -519,23 +537,23 @@ body {
   }
 }
 #apartado-nintendo {
-  background-color: rgba(255, 0, 0, 0.75);
-  background-image: url(../img/fondo-nintendo.png);
+  /*background-color: rgba(255, 0, 0, 0.75);
+  background-image:url(../img/fondo-nintendo.png);*/
 }
 
 #apartado-playstation {
-  background-color: rgba(0, 0, 255, 0.75);
-  background-image: url(../img/fondo-playstation.png);
+  /*background-color: rgba(0, 0, 255, 0.75);
+  background-image:url(../img/fondo-playstation.png)*/
 }
 
 #apartado-xbox {
-  background-color: rgba(0, 128, 0, 0.75);
-  background-image: url(../img/fondo-xbox.png);
+  /*background-color: rgba(0, 128, 0, 0.75);
+  background-image:url(../img/fondo-xbox.png)*/
 }
 
 #apartado-pc {
-  background-color: rgba(128, 128, 128, 0.75);
-  background-image: url(../img/fondo-pc.png);
+  /*background-color: rgba(128, 128, 128, 0.75);
+  background-image:url(../img/fondo-pc.png)*/
 }
 
 #categorias {

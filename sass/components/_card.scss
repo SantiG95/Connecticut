@@ -29,7 +29,6 @@
         -webkit-transform-origin: bottom;
         transform-origin: bottom;
         box-shadow: 0px 7px 8px 4px rgba(0, 0, 0, .05), 0 3px 3px rgba(0, 0, 0, .01);
-        border: 10px solid rgb(255, 255, 255);
         box-shadow: 1px 1px 12px 2px rgba(255, 255, 255, 0.73);
     }
 
@@ -37,58 +36,68 @@
         background-size: contain;
         background-repeat: no-repeat;
         height: 200px;
-        
-
+        margin-left: -50%;
+        width: 100;
         background-position: center;
         transition: all .2s;
     }
 
     &:hover &__image{
-        transform: scale(0.6);
+        transform: scale(1.1) rotate(355deg);
 
         
         transition-delay: 0s;
-        margin-top: -15%;
     }
 
     &__content{
         
-        bottom: 0;
-        margin-top: -15%;
-        
+        //clip-path: polygon(69% 0, 100% 0, 100% 100%, 47% 100%);
+        margin-top: -40%;
+        margin-left: 50%;
         height: 230px;
-        width: 100%;
+        width: 50%;
         z-index: -1;
         transition: all .2s;
-        clip-path: polygon(51% 12%, 73% 9%, 100% 0, 100% 100%, 0 100%, 0 0, 21% 8%);
-
 
     }
 
-    &:hover &__content{
-        padding-top: 1em;
-    }
-
-    &:hover .card__content{
-        margin-top: -20%;
-    }
-
-    & .card__heading{
-        padding-top: 10%;
+    &__content .card__heading{
+        //border: blue 4px solid;
+        padding: 4%;
+        font-weight: bold;
     }
 
     &:hover .card__heading{
         padding-top: 5%;
     }
 
-    & .card__description{
-        margin-top: 50%;
-        transition: all .2s;
+    &__content .card__description{
+        //border: green 4px solid;
+        height: 120px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &:hover .card__description{
-        margin-top: 2%;
+        
     }
+
+    &__content .card__price{
+        //border: violet 4px solid;
+        height: 50px;
+        background-color: rgb(228, 153, 15);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    &__content .card__price p{
+        font-size: 30px;
+    }
+
 
     /*
     &:nth-child(10n + 1) &__content{
@@ -167,8 +176,18 @@
     }
 }
 
+#cards__nintendo .card-container .card,
+#cards__playstation .card-container .card,
+#cards__xbox .card-container .card,
+#cards__pc .card-container .card{
+    background-attachment: fixed;
+    background-position: right;
+}
+
+
 #cards__nintendo .card-container .card{
-    background-color: rgb(139, 0, 0);
+    background-color: rgb(194, 0, 0);
+    background-image:url(../img/fondo-nintendo.png);
 }
 
 
@@ -177,7 +196,8 @@
 }
 
 #cards__playstation .card-container .card{
-    background-color: rgb(0, 0, 150);
+    background-color: rgb(0, 0, 175);
+    background-image:url(../img/fondo-playstation.png)
 }
 
 #cards__playstation .card__content{
@@ -185,7 +205,8 @@
 }
 
 #cards__xbox .card-container .card{
-    background-color: rgb(0, 50, 0);
+    background-color: rgb(0, 92, 0);
+    background-image:url(../img/fondo-xbox.png)
 }
 
 #cards__xbox .card__content{
@@ -193,9 +214,11 @@
 }
 
 #cards__pc .card-container .card{
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(80, 80, 80);
+    background-image:url(../img/fondo-pc.png)
 }
 
 #cards__pc .card__content{
     background: linear-gradient(180deg, rgb(172, 172, 172) 15%, rgba(38,38,38,1) 57%);
 }
+
