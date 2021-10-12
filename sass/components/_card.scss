@@ -50,12 +50,14 @@
     &__content{
         
         //clip-path: polygon(69% 0, 100% 0, 100% 100%, 47% 100%);
-        margin-top: -42%;
+        //display: block;
+        margin-top: -210px;
         margin-left: 50%;
         height: 230px;
         width: 50%;
         z-index: -1;
         transition: all .2s;
+        //border: blue 4px solid;
 
     }
 
@@ -78,10 +80,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    &:hover .card__description{
-        
     }
 
     &__content .card__price{
@@ -141,14 +139,19 @@
     }
 */
 
-    @media (min-width: 1024px){
-        &{
-            min-width: 230px;
+    @media (max-width: 600px){
+        &__image{
+            width: 50%;
+            margin-left: 0;
+        }
+
+        &__content .card__heading{
+            margin-top: 10px;
         }
     }
 
 
-    @media (min-width: 1280px){
+    /*@media (min-width: 1280px){
         &{
             min-width: 240px;
         }
@@ -173,7 +176,7 @@
             top: 0;
             padding-left: 45%;
         }
-    }
+    }*/
 }
 
 #cards__nintendo .card-container .card,

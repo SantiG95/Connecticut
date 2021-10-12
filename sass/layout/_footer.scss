@@ -1,9 +1,12 @@
 footer{
+    width: 100%;
     background-color: rgb(126, 109, 109);
     color: honeydew;
     display: flex;
     justify-content: space-between;
     padding: 1%;
+    position: absolute;
+    bottom: 0;
 
     & a{
         color: inherit;
@@ -36,5 +39,45 @@ footer{
         margin-left: -20%;
         display: flex;
         justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px){
+    footer{
+    
+        & #logo_footer{
+            width: 50px;
+            height: 50px;
+        }
+    
+        & #mapa_del_sitio{
+            margin-left: 2%;
+        }
+    
+        & #redes_sociales p{
+            text-align: center;
+            margin-left: 25%;
+        }
+    
+        & #redes_sociales img{
+            width: 50px;
+            height: 50px;
+        }
+    
+        & #redes_sociales div{
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 35%;
+        }
+    }
+}
+
+@media (max-width: 350px){
+    footer{
+        & #redes_sociales img{
+            width: 30px;
+            height: 30px;
+        }
     }
 }

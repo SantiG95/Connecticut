@@ -12,9 +12,13 @@ body{
     background-image: url(../img/fondo.jpg);
     background-attachment: fixed;
     background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 10rem;
 }
 
 main{
-    margin: 3% 5%
+    margin: 3% 5%;
 }
+
 

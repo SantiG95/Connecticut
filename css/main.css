@@ -13,6 +13,9 @@ body {
   background-image: url(../img/fondo.jpg);
   background-attachment: fixed;
   background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 10rem;
 }
 
 main {
@@ -156,6 +159,32 @@ footer p {
           background-image: linear-gradient(to top, #ec458d, #474ed7);
       }
   */
+  /*@media (min-width: 1280px){
+      &{
+          min-width: 240px;
+      }
+  }
+
+  @media (min-width: 426px) and (max-width: 768px){
+      &{
+          min-width: 100%;
+          height: 200px;
+      }
+
+      &-article{
+          display: flex;
+      }
+
+      &__image{
+          width: 40%;
+          clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+      }
+
+      &__content{
+          top: 0;
+          padding-left: 45%;
+      }
+  }*/
 }
 .card:hover, .card:focus {
   -moz-transform: scale(1.03);
@@ -180,7 +209,7 @@ footer p {
   transition-delay: 0s;
 }
 .card__content {
-  margin-top: -42%;
+  margin-top: -210px;
   margin-left: 50%;
   height: 230px;
   width: 50%;
@@ -214,31 +243,13 @@ footer p {
 .card__content .card__price p {
   font-size: 30px;
 }
-@media (min-width: 1024px) {
-  .card {
-    min-width: 230px;
-  }
-}
-@media (min-width: 1280px) {
-  .card {
-    min-width: 240px;
-  }
-}
-@media (min-width: 426px) and (max-width: 768px) {
-  .card {
-    min-width: 100%;
-    height: 200px;
-  }
-  .card-article {
-    display: flex;
-  }
+@media (max-width: 600px) {
   .card__image {
-    width: 40%;
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    width: 50%;
+    margin-left: 0;
   }
-  .card__content {
-    top: 0;
-    padding-left: 45%;
+  .card__content .card__heading {
+    margin-top: 10px;
   }
 }
 
@@ -319,6 +330,12 @@ footer p {
   width: 100px;
 }
 
+@media (max-width: 600px) {
+  #logo-pagina {
+    height: 50px;
+    width: 50px;
+  }
+}
 .contacto_form,
 .alta_form {
   margin: 0 10%;
@@ -386,6 +403,19 @@ footer p {
   background-color: green;
 }
 
+@media (max-width: 600px) {
+  .social_button {
+    width: 50px;
+    height: 50px;
+    margin: 2%;
+  }
+}
+@media (max-width: 350px) {
+  .social_button {
+    width: 30px;
+    height: 30px;
+  }
+}
 /*********************************
             HEADER
 *********************************/
@@ -538,29 +568,395 @@ footer p {
   height: 50px;
 }
 
-@media (max-width: 768px) {
-  .main-header {
-    flex-direction: column-reverse;
-  }
+/*@media (max-width: 768px){
+    .main-header{
+        flex-direction: column-reverse;
+    }
 
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle{
+        display: block;
+    }
 
+    .nav-bar{
+        display: none;
+    }
+
+    .nav-bar__nav-list{
+        flex-direction: column;
+    }
+}*/
+@media (max-width: 600px) {
   .nav-bar {
-    display: none;
+    font-size: 13px;
   }
 
-  .nav-bar__nav-list {
-    flex-direction: column;
+  .nav-bar__nav-item {
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-bar__nav-link {
+    display: block;
+    color: #fff;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .nav-bar__nav-link:hover {
+    font-weight: bold;
+    background-color: #464040;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search-bar__logo-container,
+.search-bar__form-container {
+    padding: 0.5em;
+  }
+
+  .search-bar__form-container {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-bar__form-search {
+    font-size: 15px;
+    width: 180px;
+  }
+
+  .search-bar__form-submit {
+    font-size: 25px;
+    height: 35%;
+    width: 25%;
+    background: white;
+    background-image: url(../img/lupa-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .search-bar__carrito-container {
+    display: flex;
+    flex: 0 0 3em;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5%;
+  }
+
+  .search-bar__carrito-container img {
+    background-color: #bebebe;
+    border-radius: 50%;
+    margin: 5%;
+  }
+
+  /*********************************
+              MENU TOGGLE
+  *********************************/
+  .menu-toggle {
+    display: none;
+    background-color: red;
+    flex: 0 0 3em;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-toggle__label {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-toggle__pan-arriba,
+.menu-toggle__medallon,
+.menu-toggle__pan-abajo {
+    display: block;
+    background-color: #333;
+    height: 0.2em;
+    position: absolute;
+    left: 0.5em;
+    right: 0.5em;
+    margin: 0 auto;
+  }
+
+  .menu-toggle__pan-arriba {
+    top: 0.8em;
+  }
+
+  .menu-toggle__medallon {
+    top: 50%;
+    margin-top: -0.15em;
+  }
+
+  .menu-toggle__pan-abajo {
+    bottom: 0.8em;
+  }
+
+  /*********************************
+              CARRITO
+  *********************************/
+  #carritoImagen {
+    height: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .nav-bar {
+    font-size: 13px;
+  }
+
+  .nav-bar__nav-item {
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-bar__nav-link {
+    display: block;
+    color: #fff;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .nav-bar__nav-link:hover {
+    font-weight: bold;
+    background-color: #464040;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search-bar__logo-container,
+.search-bar__form-container {
+    padding: 0.5em;
+  }
+
+  .search-bar__form-container {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-bar__form-search {
+    font-size: 15px;
+    max-width: 70%;
+    margin-left: -5%;
+  }
+
+  .search-bar__form-submit {
+    font-size: 25px;
+    height: 30%;
+    width: 20%;
+    background: white;
+    background-image: url(../img/lupa-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .search-bar__carrito-container {
+    display: flex;
+    flex: 0 0 3em;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5%;
+    margin-left: -8%;
+  }
+
+  .search-bar__carrito-container img {
+    background-color: #bebebe;
+    border-radius: 50%;
+    margin: 5%;
+  }
+
+  /*********************************
+              MENU TOGGLE
+  *********************************/
+  .menu-toggle {
+    display: none;
+    background-color: red;
+    flex: 0 0 3em;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-toggle__label {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-toggle__pan-arriba,
+.menu-toggle__medallon,
+.menu-toggle__pan-abajo {
+    display: block;
+    background-color: #333;
+    height: 0.2em;
+    position: absolute;
+    left: 0.5em;
+    right: 0.5em;
+    margin: 0 auto;
+  }
+
+  .menu-toggle__pan-arriba {
+    top: 0.8em;
+  }
+
+  .menu-toggle__medallon {
+    top: 50%;
+    margin-top: -0.15em;
+  }
+
+  .menu-toggle__pan-abajo {
+    bottom: 0.8em;
+  }
+
+  /*********************************
+              CARRITO
+  *********************************/
+  #carritoImagen {
+    height: 40px;
+  }
+}
+@media (max-width: 350px) {
+  .nav-bar {
+    font-size: 13px;
+  }
+
+  .nav-bar__nav-item {
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-bar__nav-link {
+    display: block;
+    color: #fff;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .nav-bar__nav-link:hover {
+    font-weight: bold;
+    background-color: #464040;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search-bar__logo-container,
+.search-bar__form-container {
+    padding: 0.5em;
+  }
+
+  .search-bar__form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+  }
+
+  .search-bar__form-search {
+    font-size: 15px;
+    max-width: 80%;
+  }
+
+  .search-bar__form-submit {
+    font-size: 25px;
+    height: 30%;
+    width: 20%;
+    background: white;
+    background-image: url(../img/lupa-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .search-bar__carrito-container {
+    display: flex;
+    flex: 0 0 3em;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5%;
+    margin-left: -5%;
+  }
+
+  .search-bar__carrito-container img {
+    background-color: #bebebe;
+    border-radius: 50%;
+    margin: 5%;
+  }
+
+  /*********************************
+              MENU TOGGLE
+  *********************************/
+  .menu-toggle {
+    display: none;
+    background-color: red;
+    flex: 0 0 3em;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-toggle__label {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-toggle__pan-arriba,
+.menu-toggle__medallon,
+.menu-toggle__pan-abajo {
+    display: block;
+    background-color: #333;
+    height: 0.2em;
+    position: absolute;
+    left: 0.5em;
+    right: 0.5em;
+    margin: 0 auto;
+  }
+
+  .menu-toggle__pan-arriba {
+    top: 0.8em;
+  }
+
+  .menu-toggle__medallon {
+    top: 50%;
+    margin-top: -0.15em;
+  }
+
+  .menu-toggle__pan-abajo {
+    bottom: 0.8em;
+  }
+
+  /*********************************
+              CARRITO
+  *********************************/
+  #carritoImagen {
+    height: 40px;
   }
 }
 footer {
+  width: 100%;
   background-color: #7e6d6d;
   color: honeydew;
   display: flex;
   justify-content: space-between;
   padding: 1%;
+  position: absolute;
+  bottom: 0;
 }
 footer a {
   color: inherit;
@@ -590,6 +986,35 @@ footer #redes_sociales div {
   justify-content: space-between;
 }
 
+@media (max-width: 600px) {
+  footer #logo_footer {
+    width: 50px;
+    height: 50px;
+  }
+  footer #mapa_del_sitio {
+    margin-left: 2%;
+  }
+  footer #redes_sociales p {
+    text-align: center;
+    margin-left: 25%;
+  }
+  footer #redes_sociales img {
+    width: 50px;
+    height: 50px;
+  }
+  footer #redes_sociales div {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 35%;
+  }
+}
+@media (max-width: 350px) {
+  footer #redes_sociales img {
+    width: 30px;
+    height: 30px;
+  }
+}
 .section-cards {
   padding: 1em;
   margin: 100px 30px;
