@@ -15,6 +15,10 @@ body {
   background-size: cover;
 }
 
+main {
+  margin: 3% 5%;
+}
+
 #categorias__text {
   font-family: "Indie Flower", cursive;
   font-size: 60px;
@@ -78,6 +82,21 @@ body {
   text-align: center;
 }
 
+#main_nosotros h1 {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+#main_nosotros p {
+  font-size: 1.5em;
+}
+
+footer p {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 5%;
+}
+
 .card {
   outline: none;
   flex-grow: 1;
@@ -95,7 +114,6 @@ body {
   -moz-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  border: 0px solid transparent;
   text-decoration: none;
   /*
       &:nth-child(10n + 1) &__content{
@@ -146,7 +164,6 @@ body {
   -moz-transform-origin: bottom;
   -webkit-transform-origin: bottom;
   transform-origin: bottom;
-  box-shadow: 0px 7px 8px 4px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.01);
   box-shadow: 1px 1px 12px 2px rgba(255, 255, 255, 0.73);
 }
 .card__image {
@@ -163,7 +180,7 @@ body {
   transition-delay: 0s;
 }
 .card__content {
-  margin-top: -40%;
+  margin-top: -42%;
   margin-left: 50%;
   height: 230px;
   width: 50%;
@@ -173,12 +190,14 @@ body {
 .card__content .card__heading {
   padding: 4%;
   font-weight: bold;
+  margin-top: 3%;
+  height: 60px;
 }
 .card:hover .card__heading {
   padding-top: 5%;
 }
 .card__content .card__description {
-  height: 120px;
+  height: 110px;
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -297,11 +316,12 @@ body {
 
 #logo-pagina {
   height: 100px;
+  width: 100px;
 }
 
 .contacto_form,
 .alta_form {
-  margin: 10% 15%;
+  margin: 0 10%;
   border: black 2px solid;
   text-align: center;
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
@@ -341,6 +361,29 @@ body {
   font-size: 30px;
   padding: 5px;
   margin-bottom: 3%;
+}
+
+.social_button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+#facebook_button:hover {
+  background-color: blue;
+}
+
+#twitter_button:hover {
+  background-color: #00d0df;
+}
+
+#instagram_button:hover {
+  background-color: pink;
+}
+
+#whatsapp_button:hover {
+  background-color: green;
 }
 
 /*********************************
@@ -391,7 +434,7 @@ body {
 }
 
 /*********************************
-            SEARCH BAR height: 4em;
+            SEARCH BAR 
 *********************************/
 .search-bar {
   display: flex;
@@ -437,6 +480,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 5%;
+}
+
+.search-bar__carrito-container img {
+  background-color: #bebebe;
+  border-radius: 50%;
+  margin: 5%;
 }
 
 /*********************************
@@ -506,6 +555,41 @@ body {
     flex-direction: column;
   }
 }
+footer {
+  background-color: #7e6d6d;
+  color: honeydew;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+footer #logo_footer {
+  width: 100px;
+  height: 100px;
+}
+footer #mapa_del_sitio {
+  display: flex;
+  flex-direction: column;
+  margin-left: -40%;
+}
+footer #redes_sociales p {
+  text-align: center;
+  margin-left: -20%;
+}
+footer #redes_sociales img {
+  width: 70px;
+  height: 70px;
+}
+footer #redes_sociales div {
+  width: 120%;
+  margin-left: -20%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .section-cards {
   padding: 1em;
   margin: 100px 30px;
@@ -513,8 +597,6 @@ body {
   border-radius: 30px;
   background-attachment: fixed;
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
-  margin-right: 10%;
-  margin-left: 10%;
   background-color: rgba(175, 152, 152, 0.815);
 }
 
@@ -559,10 +641,23 @@ body {
 #categorias {
   text-align: center;
   border: #8d7b7b 2px solid;
-  margin: 40px;
   padding: 30px;
 }
 
 .alta_mensaje {
   margin: 5% 5%;
+}
+
+#main_nosotros {
+  display: flex;
+  justify-content: space-around;
+  border: black solid 1px;
+  padding: 10px;
+}
+#main_nosotros img {
+  max-width: 400px;
+  margin-right: 5%;
+}
+#main_nosotros p {
+  padding: 5% 0;
 }

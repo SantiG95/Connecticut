@@ -1,0 +1,19 @@
+#main_nosotros{
+    display: flex;
+    justify-content: space-around;
+    border: black solid 1px;
+    padding: 10px;
+
+
+    & img{
+        max-width: 400px;
+        margin-right: 5%;
+    }
+
+    
+
+    & p{
+        padding: 5% 0;
+    }
+}
+

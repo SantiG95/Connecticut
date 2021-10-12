@@ -1,0 +1,40 @@
+footer{
+    background-color: rgb(126, 109, 109);
+    color: honeydew;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+
+    & a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    & #logo_footer{
+        width: 100px;
+        height: 100px;
+    }
+
+    & #mapa_del_sitio{
+        display: flex;
+        flex-direction: column;
+        margin-left: -40%;
+    }
+
+    & #redes_sociales p{
+        text-align: center;
+        margin-left: -20%;
+    }
+
+    & #redes_sociales img{
+        width: 70px;
+        height: 70px;
+    }
+
+    & #redes_sociales div{
+        width: 120%;
+        margin-left: -20%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
