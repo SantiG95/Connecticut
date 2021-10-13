@@ -96,88 +96,49 @@
         font-size: 30px;
     }
 
+    @media (max-width: 800px){
+        max-width: 45%;
+        display: flex;
+        
+        &__content{
+            //border: blue 4px solid;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            //border: blue 4px solid;
+        }
 
-    /*
-    &:nth-child(10n + 1) &__content{
-        background-image: linear-gradient(to top, #b429f9, #26c5f3);
-    }
-
-    &:nth-child(10n + 2) &__content{
-        background-image: linear-gradient(to top, #af1239, #cce269);
-    }
-
-    &:nth-child(10n + 3) &__content{
-        background-image: linear-gradient(to top, #0b3866, #3ddab2);
-    }
-
-    &:nth-child(10n + 4) &__content{
-        background-image: linear-gradient(to top, #f40752, #7c65a9);
-    }
-
-    &:nth-child(10n + 5) &__content{
-        background-image: linear-gradient(to top, #1c3b41, #69d449);
-    }
-
-    &:nth-child(10n + 6) &__content{
-        background-image: linear-gradient(to top, #0a5df8, #ed2d53);
-    }
-
-    &:nth-child(10n + 7) &__content{
-        background-image: linear-gradient(to top, #661069, #cec360);
-    }
-
-    &:nth-child(10n + 8) &__content{
-        background-image: linear-gradient(to top, #702b19, #cec360);
-    }
-
-    &:nth-child(10n + 9) &__content{
-        background-image: linear-gradient(to top, #034a66, #ced11a);
-    }
-
-    &:nth-child(10n + 10) &__content{
-        background-image: linear-gradient(to top, #ec458d, #474ed7);
-    }
-*/
-
-    @media (max-width: 600px){
         &__image{
-            width: 50%;
+            height: 50%;
             margin-left: 0;
+            
         }
 
         &__content .card__heading{
-            margin-top: 10px;
+            //border: blue 4px solid;
+            padding: 4%;
+            font-weight: bold;
+            margin-top: 3%;
+            height: 60px;
         }
+
+        &__content .card__description{
+            //border: green 4px solid;
+            visibility: hidden;
+            height: 0px;
+        }
+
+        &__content .card__price{
+            //border: violet 4px solid;
+            background-color: rgb(228, 153, 15);
+    
+        }
+
+        
     }
-
-
-    /*@media (min-width: 1280px){
-        &{
-            min-width: 240px;
-        }
-    }
-
-    @media (min-width: 426px) and (max-width: 768px){
-        &{
-            min-width: 100%;
-            height: 200px;
-        }
-
-        &-article{
-            display: flex;
-        }
-
-        &__image{
-            width: 40%;
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-        }
-
-        &__content{
-            top: 0;
-            padding-left: 45%;
-        }
-    }*/
 }
+
+
 
 #cards__nintendo .card-container .card,
 #cards__playstation .card-container .card,
