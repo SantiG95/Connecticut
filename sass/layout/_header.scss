@@ -17,9 +17,6 @@
     display: block;
 }
 
-#menu:checked ~ .search-bar .menu-toggle__label{
-    //background-color: yellow;
-}
 
 /*********************************
             NAV BAR
@@ -75,10 +72,6 @@
     padding: 1em;
 }
 
-.search-bar__logo-container{
-    //background-color: yellow;
-}
-
 .search-bar__form-container{
     //background-color: gold;
     flex-basis: 100%;
@@ -86,10 +79,6 @@
     justify-content: center;
     align-items: center;
     padding: 0 10%;
-}
-
-.search-bar__form-label{
-    //background-color: greenyellow;
 }
 
 .search-bar__form-search{
@@ -215,57 +204,13 @@
 @media (max-width: 600px){
     .nav-bar{
         font-size: 13px;
-        //background-color: mediumturquoise;
-    }
-    
-    .nav-bar__nav-item{
-        text-align: center;
-        //background-color: pink;
-        padding: 0;
-    }
-    
-    .nav-bar__nav-link{
-        display: block;
-        //background-color: purple;
-        color: #fff;
-        //background-color: blue;
-        padding: 1em 2em;
-        text-decoration: none;
-        transition: all .2s;
-    }
-    
-    .nav-bar__nav-link:hover{
-        font-weight: bold;
-        background-color: rgb(70, 64, 64);
-        
-    }
-
-    .search-bar{
-        //background-color: olivedrab;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    
-    .search-bar__logo-container,
-    .search-bar__form-container{
-        padding: 0.5em;
-    }
-    
-    .search-bar__logo-container{
-        //background-color: yellow;
     }
     
     .search-bar__form-container{
-        //background-color: gold;
         flex-basis: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    
-    .search-bar__form-label{
-        //background-color: greenyellow;
     }
     
     .search-bar__form-search{
@@ -274,86 +219,13 @@
     }
     
     .search-bar__form-submit{
-        font-size: 25px;
         height: 35%;
         width: 25%;
-        background: white;
-    
-        background-image: url(../img/lupa-icon.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        
     }
-    
-    .search-bar__carrito-container{
-        display: flex;
-        flex: 0 0 3em;
-        justify-content: center;
-        align-items: center;
-        //background-color: goldenrod;
-        margin: 0 5%;
-    }
-    
-    .search-bar__carrito-container img{
-        background-color: rgb(190, 190, 190);
-        border-radius: 50%;
-        margin: 5%;
-    }
-    /*********************************
-                MENU TOGGLE
-    *********************************/
-    
-    .menu-toggle{
-        display: none;
-        background-color: red;
-        flex: 0 0 3em;
-        position: relative;
-        cursor: pointer;
-    }
-    
-    .menu-toggle__label{
-        display: block;
-        background-color: black;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .menu-toggle__pan-arriba,
-    .menu-toggle__medallon,
-    .menu-toggle__pan-abajo{
-        display: block;
-        background-color: #333;
-        height: .2em;
-        position: absolute;
-        left: .5em;
-        right: .5em;
-        margin: 0 auto;
-    }
-    
-    .menu-toggle__pan-arriba{
-        top: .8em;
-    }
-    
-    .menu-toggle__medallon{
-        top: 50%;
-        margin-top: -.15em;
-    }
-    
-    .menu-toggle__pan-abajo{
-        bottom: .8em;
-    }
-    
-    
-    /*********************************
-                CARRITO
-    *********************************/
-    
-    #carritoImagen {
-        height: 40px;
-    }
-    
 
+    .search-bar__carrito-container{
+        margin-left: -5%;
+    }
 }
 
 
@@ -361,149 +233,34 @@
 
 
 
-@media (max-width: 450px){
-    .nav-bar{
-        font-size: 13px;
-        //background-color: mediumturquoise;
-    }
-    
-    .nav-bar__nav-item{
-        text-align: center;
-        //background-color: pink;
-        padding: 0;
-    }
-    
-    .nav-bar__nav-link{
-        display: block;
-        //background-color: purple;
-        color: #fff;
-        //background-color: blue;
-        padding: 1em 2em;
-        text-decoration: none;
-        transition: all .2s;
-    }
-    
-    .nav-bar__nav-link:hover{
-        font-weight: bold;
-        background-color: rgb(70, 64, 64);
-        
-    }
-
-    .search-bar{
-        //background-color: olivedrab;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    
+@media (max-width: 500px){
     .search-bar__logo-container,
     .search-bar__form-container{
-        padding: 0.5em;
+        padding: 1em;
     }
     
-    .search-bar__logo-container{
-        //background-color: yellow;
-    }
     
     .search-bar__form-container{
-        //background-color: gold;
-        flex-basis: 100%;
+        max-width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    
-    .search-bar__form-label{
-        //background-color: greenyellow;
     }
     
     .search-bar__form-search{
         font-size: 15px;
-        max-width: 70%;
-        margin-left: -5%;
+        margin-left: -20%;
     }
     
     .search-bar__form-submit{
-        font-size: 25px;
-        height: 30%;
+        height: 60%;
         width: 20%;
-        background: white;
-    
-        background-image: url(../img/lupa-icon.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        
     }
     
     .search-bar__carrito-container{
-        display: flex;
-        flex: 0 0 3em;
-        justify-content: center;
-        align-items: center;
-        //background-color: goldenrod;
-        margin: 0 5%;
         margin-left: -8%;
     }
-    
-    .search-bar__carrito-container img{
-        background-color: rgb(190, 190, 190);
-        border-radius: 50%;
-        margin: 5%;
-    }
-    /*********************************
-                MENU TOGGLE
-    *********************************/
-    
-    .menu-toggle{
-        display: none;
-        background-color: red;
-        flex: 0 0 3em;
-        position: relative;
-        cursor: pointer;
-    }
-    
-    .menu-toggle__label{
-        display: block;
-        background-color: black;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .menu-toggle__pan-arriba,
-    .menu-toggle__medallon,
-    .menu-toggle__pan-abajo{
-        display: block;
-        background-color: #333;
-        height: .2em;
-        position: absolute;
-        left: .5em;
-        right: .5em;
-        margin: 0 auto;
-    }
-    
-    .menu-toggle__pan-arriba{
-        top: .8em;
-    }
-    
-    .menu-toggle__medallon{
-        top: 50%;
-        margin-top: -.15em;
-    }
-    
-    .menu-toggle__pan-abajo{
-        bottom: .8em;
-    }
-    
-    
-    /*********************************
-                CARRITO
-    *********************************/
-    
-    #carritoImagen {
-        height: 40px;
-    }
-    
-
 }
 
 
@@ -513,146 +270,27 @@
 
 
 @media (max-width: 350px){
-    .nav-bar{
-        font-size: 13px;
-        //background-color: mediumturquoise;
+    .search-bar__form-container{
+        max-width: 50%;
     }
     
-    .nav-bar__nav-item{
-        text-align: center;
-        //background-color: pink;
-        padding: 0;
+    
+    .search-bar__form-search{
+        font-size: 15px;
+        max-width: 90%;
     }
     
+    .search-bar__form-submit{
+        width: 30%;
+    }
+
     .nav-bar__nav-link{
         display: block;
         //background-color: purple;
         color: #fff;
         //background-color: blue;
-        padding: 1em 2em;
+        padding: 1em 1.5em;
         text-decoration: none;
         transition: all .2s;
     }
-    
-    .nav-bar__nav-link:hover{
-        font-weight: bold;
-        background-color: rgb(70, 64, 64);
-        
-    }
-
-    .search-bar{
-        //background-color: olivedrab;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    
-    .search-bar__logo-container,
-    .search-bar__form-container{
-        padding: 0.5em;
-    }
-    
-    .search-bar__logo-container{
-        //background-color: yellow;
-    }
-    
-    .search-bar__form-container{
-        //background-color: gold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 50%;
-    }
-    
-    .search-bar__form-label{
-        //background-color: greenyellow;
-    }
-    
-    .search-bar__form-search{
-        font-size: 15px;
-        max-width: 80%;
-    }
-    
-    .search-bar__form-submit{
-        font-size: 25px;
-        height: 30%;
-        width: 20%;
-        background: white;
-    
-        background-image: url(../img/lupa-icon.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        
-    }
-    
-    .search-bar__carrito-container{
-        display: flex;
-        flex: 0 0 3em;
-        justify-content: center;
-        align-items: center;
-        //background-color: goldenrod;
-        margin: 0 5%;
-        margin-left: -5%;
-    }
-    
-    .search-bar__carrito-container img{
-        background-color: rgb(190, 190, 190);
-        border-radius: 50%;
-        margin: 5%;
-    }
-    /*********************************
-                MENU TOGGLE
-    *********************************/
-    
-    .menu-toggle{
-        display: none;
-        background-color: red;
-        flex: 0 0 3em;
-        position: relative;
-        cursor: pointer;
-    }
-    
-    .menu-toggle__label{
-        display: block;
-        background-color: black;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .menu-toggle__pan-arriba,
-    .menu-toggle__medallon,
-    .menu-toggle__pan-abajo{
-        display: block;
-        background-color: #333;
-        height: .2em;
-        position: absolute;
-        left: .5em;
-        right: .5em;
-        margin: 0 auto;
-    }
-    
-    .menu-toggle__pan-arriba{
-        top: .8em;
-    }
-    
-    .menu-toggle__medallon{
-        top: 50%;
-        margin-top: -.15em;
-    }
-    
-    .menu-toggle__pan-abajo{
-        bottom: .8em;
-    }
-    
-    
-    /*********************************
-                CARRITO
-    *********************************/
-    
-    #carritoImagen {
-        height: 40px;
-    }
-    
-
 }

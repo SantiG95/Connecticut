@@ -79,3 +79,32 @@ footer p{
     text-decoration: underline;
     margin-bottom: 5%;
 }
+
+@media (max-width: 600px){
+    #categorias__text{
+        font-size: 2.1em;
+    }
+    
+    #cantidad-productos{
+        font-size: 1em;
+    }
+
+    #consola-text,
+    #juegos-text,
+    #amiibo-text{
+        font-size: 2em;
+        
+    }
+
+    #main_nosotros h1{
+        font-size: 1em;
+    }
+    
+    #main_nosotros p{
+        font-size: 0.7em;
+    }
+
+    .alta_mensaje{
+        font-size: 1.2em;
+    }
+}

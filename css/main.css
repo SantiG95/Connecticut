@@ -100,6 +100,33 @@ footer p {
   margin-bottom: 5%;
 }
 
+@media (max-width: 600px) {
+  #categorias__text {
+    font-size: 2.1em;
+  }
+
+  #cantidad-productos {
+    font-size: 1em;
+  }
+
+  #consola-text,
+#juegos-text,
+#amiibo-text {
+    font-size: 2em;
+  }
+
+  #main_nosotros h1 {
+    font-size: 1em;
+  }
+
+  #main_nosotros p {
+    font-size: 0.7em;
+  }
+
+  .alta_mensaje {
+    font-size: 1.2em;
+  }
+}
 .card {
   outline: none;
   flex-grow: 1;
@@ -330,10 +357,26 @@ footer p {
   width: 100px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   #logo-pagina {
     height: 50px;
     width: 50px;
+  }
+
+  .logo-nintendo,
+.logo-playstation,
+.logo-xbox,
+.logo-pc {
+    border: solid white 0.3em;
+  }
+
+  #logo-nintendo-categorias,
+#logo-xbox-categorias,
+#logo-playstation-categorias,
+#logo-pc-categorias {
+    max-width: 100%;
+    border: solid white 0.3em;
+    padding: 0%;
   }
 }
 .contacto_form,
@@ -380,6 +423,46 @@ footer p {
   margin-bottom: 3%;
 }
 
+@media (max-width: 600px) {
+  .contacto_form,
+.alta_form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .contacto_form h1,
+.alta_form h1 {
+    font-size: 1.5em;
+  }
+  .contacto_form label, .contacto_form input, .contacto_form select, .contacto_form textarea,
+.alta_form label,
+.alta_form input,
+.alta_form select,
+.alta_form textarea {
+    font-size: 1em;
+    margin: 0;
+  }
+  .contacto_form .div_form,
+.alta_form .div_form {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2% 15%;
+  }
+  .contacto_form [type=checkbox],
+.alta_form [type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-left: 40%;
+  }
+  .contacto_form [type=submit],
+.alta_form [type=submit] {
+    font-size: 1em;
+    width: 6em;
+    margin-left: 25%;
+  }
+}
 .social_button {
   width: 70px;
   height: 70px;
@@ -590,34 +673,6 @@ footer p {
     font-size: 13px;
   }
 
-  .nav-bar__nav-item {
-    text-align: center;
-    padding: 0;
-  }
-
-  .nav-bar__nav-link {
-    display: block;
-    color: #fff;
-    padding: 1em 2em;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .nav-bar__nav-link:hover {
-    font-weight: bold;
-    background-color: #464040;
-  }
-
-  .search-bar {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .search-bar__logo-container,
-.search-bar__form-container {
-    padding: 0.5em;
-  }
-
   .search-bar__form-container {
     flex-basis: 100%;
     display: flex;
@@ -631,115 +686,22 @@ footer p {
   }
 
   .search-bar__form-submit {
-    font-size: 25px;
     height: 35%;
     width: 25%;
-    background: white;
-    background-image: url(../img/lupa-icon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   .search-bar__carrito-container {
-    display: flex;
-    flex: 0 0 3em;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5%;
-  }
-
-  .search-bar__carrito-container img {
-    background-color: #bebebe;
-    border-radius: 50%;
-    margin: 5%;
-  }
-
-  /*********************************
-              MENU TOGGLE
-  *********************************/
-  .menu-toggle {
-    display: none;
-    background-color: red;
-    flex: 0 0 3em;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .menu-toggle__label {
-    display: block;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-  }
-
-  .menu-toggle__pan-arriba,
-.menu-toggle__medallon,
-.menu-toggle__pan-abajo {
-    display: block;
-    background-color: #333;
-    height: 0.2em;
-    position: absolute;
-    left: 0.5em;
-    right: 0.5em;
-    margin: 0 auto;
-  }
-
-  .menu-toggle__pan-arriba {
-    top: 0.8em;
-  }
-
-  .menu-toggle__medallon {
-    top: 50%;
-    margin-top: -0.15em;
-  }
-
-  .menu-toggle__pan-abajo {
-    bottom: 0.8em;
-  }
-
-  /*********************************
-              CARRITO
-  *********************************/
-  #carritoImagen {
-    height: 40px;
+    margin-left: -5%;
   }
 }
-@media (max-width: 450px) {
-  .nav-bar {
-    font-size: 13px;
-  }
-
-  .nav-bar__nav-item {
-    text-align: center;
-    padding: 0;
-  }
-
-  .nav-bar__nav-link {
-    display: block;
-    color: #fff;
-    padding: 1em 2em;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .nav-bar__nav-link:hover {
-    font-weight: bold;
-    background-color: #464040;
-  }
-
-  .search-bar {
-    display: flex;
-    justify-content: space-between;
-  }
-
+@media (max-width: 500px) {
   .search-bar__logo-container,
 .search-bar__form-container {
-    padding: 0.5em;
+    padding: 1em;
   }
 
   .search-bar__form-container {
-    flex-basis: 100%;
+    max-width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -747,205 +709,38 @@ footer p {
 
   .search-bar__form-search {
     font-size: 15px;
-    max-width: 70%;
-    margin-left: -5%;
+    margin-left: -20%;
   }
 
   .search-bar__form-submit {
-    font-size: 25px;
-    height: 30%;
+    height: 60%;
     width: 20%;
-    background: white;
-    background-image: url(../img/lupa-icon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   .search-bar__carrito-container {
-    display: flex;
-    flex: 0 0 3em;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5%;
     margin-left: -8%;
-  }
-
-  .search-bar__carrito-container img {
-    background-color: #bebebe;
-    border-radius: 50%;
-    margin: 5%;
-  }
-
-  /*********************************
-              MENU TOGGLE
-  *********************************/
-  .menu-toggle {
-    display: none;
-    background-color: red;
-    flex: 0 0 3em;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .menu-toggle__label {
-    display: block;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-  }
-
-  .menu-toggle__pan-arriba,
-.menu-toggle__medallon,
-.menu-toggle__pan-abajo {
-    display: block;
-    background-color: #333;
-    height: 0.2em;
-    position: absolute;
-    left: 0.5em;
-    right: 0.5em;
-    margin: 0 auto;
-  }
-
-  .menu-toggle__pan-arriba {
-    top: 0.8em;
-  }
-
-  .menu-toggle__medallon {
-    top: 50%;
-    margin-top: -0.15em;
-  }
-
-  .menu-toggle__pan-abajo {
-    bottom: 0.8em;
-  }
-
-  /*********************************
-              CARRITO
-  *********************************/
-  #carritoImagen {
-    height: 40px;
   }
 }
 @media (max-width: 350px) {
-  .nav-bar {
-    font-size: 13px;
-  }
-
-  .nav-bar__nav-item {
-    text-align: center;
-    padding: 0;
-  }
-
-  .nav-bar__nav-link {
-    display: block;
-    color: #fff;
-    padding: 1em 2em;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .nav-bar__nav-link:hover {
-    font-weight: bold;
-    background-color: #464040;
-  }
-
-  .search-bar {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .search-bar__logo-container,
-.search-bar__form-container {
-    padding: 0.5em;
-  }
-
   .search-bar__form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 50%;
   }
 
   .search-bar__form-search {
     font-size: 15px;
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .search-bar__form-submit {
-    font-size: 25px;
-    height: 30%;
-    width: 20%;
-    background: white;
-    background-image: url(../img/lupa-icon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 30%;
   }
 
-  .search-bar__carrito-container {
-    display: flex;
-    flex: 0 0 3em;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5%;
-    margin-left: -5%;
-  }
-
-  .search-bar__carrito-container img {
-    background-color: #bebebe;
-    border-radius: 50%;
-    margin: 5%;
-  }
-
-  /*********************************
-              MENU TOGGLE
-  *********************************/
-  .menu-toggle {
-    display: none;
-    background-color: red;
-    flex: 0 0 3em;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .menu-toggle__label {
+  .nav-bar__nav-link {
     display: block;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-  }
-
-  .menu-toggle__pan-arriba,
-.menu-toggle__medallon,
-.menu-toggle__pan-abajo {
-    display: block;
-    background-color: #333;
-    height: 0.2em;
-    position: absolute;
-    left: 0.5em;
-    right: 0.5em;
-    margin: 0 auto;
-  }
-
-  .menu-toggle__pan-arriba {
-    top: 0.8em;
-  }
-
-  .menu-toggle__medallon {
-    top: 50%;
-    margin-top: -0.15em;
-  }
-
-  .menu-toggle__pan-abajo {
-    bottom: 0.8em;
-  }
-
-  /*********************************
-              CARRITO
-  *********************************/
-  #carritoImagen {
-    height: 40px;
+    color: #fff;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    transition: all 0.2s;
   }
 }
 footer {
@@ -986,6 +781,11 @@ footer #redes_sociales div {
   justify-content: space-between;
 }
 
+@media (max-width: 800px) {
+  footer #mapa_del_sitio {
+    margin-left: -30%;
+  }
+}
 @media (max-width: 600px) {
   footer #logo_footer {
     width: 50px;
@@ -1067,8 +867,26 @@ footer #redes_sociales div {
   text-align: center;
   border: #8d7b7b 2px solid;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
+#apartados-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 860px) {
+  #categorias {
+    padding: 10px;
+  }
+
+  #apartados-container a {
+    width: 40%;
+    padding: 0%;
+  }
+}
 .alta_mensaje {
   margin: 5% 5%;
 }
@@ -1076,13 +894,23 @@ footer #redes_sociales div {
 #main_nosotros {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   border: black solid 1px;
   padding: 10px;
 }
 #main_nosotros img {
-  max-width: 400px;
+  display: flex;
+  align-items: center;
+  max-width: 40%;
+  height: 100%;
   margin-right: 5%;
 }
 #main_nosotros p {
   padding: 5% 0;
+}
+
+@media (max-width: 600px) {
+  #main_nosotros img {
+    max-width: 40%;
+  }
 }

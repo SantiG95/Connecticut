@@ -42,6 +42,18 @@ footer{
     }
 }
 
+
+
+@media (max-width: 800px){
+    footer{
+        & #mapa_del_sitio{
+            margin-left: -30%;
+        }
+    }
+}
+
+
+
 @media (max-width: 600px){
     footer{
     

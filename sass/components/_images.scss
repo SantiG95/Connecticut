@@ -32,9 +32,25 @@
     width: 100px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
     #logo-pagina{
         height: 50px;
         width: 50px;
+    }
+    
+    .logo-nintendo,
+    .logo-playstation,
+    .logo-xbox,
+    .logo-pc{
+        border: solid white 0.3em;
+    }
+
+    #logo-nintendo-categorias,
+    #logo-xbox-categorias,
+    #logo-playstation-categorias,
+    #logo-pc-categorias{
+        max-width: 100%;
+        border: solid white 0.3em;
+        padding: 0%;
     }
 }

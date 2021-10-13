@@ -53,7 +53,25 @@
 #categorias{
     text-align: center;
     border: rgb(141, 123, 123) 2px solid;
-    
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#apartados-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (max-width: 860px){
+    #categorias{
+        padding: 10px;
+    }
+
+    #apartados-container a{
+        width: 40%;
+        padding: 0%;
+    }
 }
 
