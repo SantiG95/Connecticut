@@ -48,21 +48,16 @@
     }
 
     &__content{
-        
-        //clip-path: polygon(69% 0, 100% 0, 100% 100%, 47% 100%);
-        //display: block;
         margin-top: -210px;
         margin-left: 50%;
         height: 230px;
         width: 50%;
         z-index: -1;
         transition: all .2s;
-        //border: blue 4px solid;
 
     }
 
     &__content .card__heading{
-        //border: blue 4px solid;
         padding: 4%;
         font-weight: bold;
         margin-top: 3%;
@@ -74,7 +69,6 @@
     }
 
     &__content .card__description{
-        //border: green 4px solid;
         height: 110px;
         font-size: 15px;
         display: flex;
@@ -83,7 +77,6 @@
     }
 
     &__content .card__price{
-        //border: violet 4px solid;
         height: 50px;
         background-color: rgb(228, 153, 15);
         border-radius: 15px;
@@ -101,11 +94,9 @@
         display: flex;
         
         &__content{
-            //border: blue 4px solid;
             padding: 0;
             margin: 0;
             width: 100%;
-            //border: blue 4px solid;
         }
 
         &__image{
@@ -115,7 +106,6 @@
         }
 
         &__content .card__heading{
-            //border: blue 4px solid;
             padding: 4%;
             font-weight: bold;
             margin-top: 3%;
@@ -123,13 +113,11 @@
         }
 
         &__content .card__description{
-            //border: green 4px solid;
             visibility: hidden;
             height: 0px;
         }
 
         &__content .card__price{
-            //border: violet 4px solid;
             background-color: rgb(228, 153, 15);
     
         }

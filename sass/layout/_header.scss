@@ -171,36 +171,6 @@
 }
 
 
-
-
-/*@media (max-width: 768px){
-    .main-header{
-        flex-direction: column-reverse;
-    }
-
-    .menu-toggle{
-        display: block;
-    }
-
-    .nav-bar{
-        display: none;
-    }
-
-    .nav-bar__nav-list{
-        flex-direction: column;
-    }
-}*/
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 600px){
     .nav-bar{
         font-size: 13px;
@@ -286,9 +256,7 @@
 
     .nav-bar__nav-link{
         display: block;
-        //background-color: purple;
         color: #fff;
-        //background-color: blue;
         padding: 1em 1.5em;
         text-decoration: none;
         transition: all .2s;
