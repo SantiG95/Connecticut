@@ -163,6 +163,8 @@ footer p {
   width: 100;
   background-position: center;
   transition: all 0.2s;
+  position: relative;
+  z-index: -1;
 }
 .card:hover .card__image {
   transform: scale(1.1) rotate(355deg);
@@ -173,7 +175,7 @@ footer p {
   margin-left: 50%;
   height: 230px;
   width: 50%;
-  z-index: -1;
+  z-index: 1;
   transition: all 0.2s;
 }
 .card__content .card__heading {
@@ -202,6 +204,19 @@ footer p {
 }
 .card__content .card__price p {
   font-size: 30px;
+}
+.card__quantity {
+  border: blue 4px solid;
+  display: flex;
+  justify-content: center;
+}
+.card span {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+}
+.card .product_quantity {
+  width: 20%;
 }
 @media (max-width: 800px) {
   .card {

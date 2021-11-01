@@ -38,11 +38,13 @@
         width: 100;
         background-position: center;
         transition: all .2s;
+        position: relative;
+        z-index: -1;
     }
 
     &:hover &__image{
         transform: scale(1.1) rotate(355deg);
-
+        
         
         transition-delay: 0s;
     }
@@ -52,7 +54,7 @@
         margin-left: 50%;
         height: 230px;
         width: 50%;
-        z-index: -1;
+        z-index: 1;
         transition: all .2s;
 
     }
@@ -88,6 +90,24 @@
     &__content .card__price p{
         font-size: 30px;
     }
+
+    &__quantity{
+        border: blue 4px solid;
+        display: flex;
+        justify-content: center;
+    }
+
+    & span{
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+    }
+
+    & .product_quantity {
+        
+        width: 20%;
+    }
+    
 
     @media (max-width: 800px){
         max-width: 45%;
