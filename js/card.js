@@ -16,12 +16,14 @@ for(var i = 0; i < listaCartas.length; i++){
     botones[0].addEventListener("click", function(){
         if(this.parentElement.getElementsByClassName("product_quantity")[0].innerHTML > 0){
             this.parentElement.getElementsByClassName("product_quantity")[0].innerHTML = parseInt(this.parentElement.getElementsByClassName("product_quantity")[0].innerHTML) - 1
+            console.log(`${this.parentElement.parentElement.getElementsByClassName("card__heading")[0].innerHTML}\nUnidades compradas: ${this.parentElement.getElementsByClassName("product_quantity")[0].innerHTML}`)
         }
         
     })
 
     botones[1].addEventListener("click", function(){
         this.parentElement.getElementsByClassName("product_quantity")[0].innerHTML = parseInt(this.parentElement.getElementsByClassName("product_quantity")[0].innerHTML) + 1
+        console.log(`${this.parentElement.parentElement.getElementsByClassName("card__heading")[0].innerHTML}\nUnidades compradas: ${this.parentElement.getElementsByClassName("product_quantity")[0].innerHTML}`)
     })
     
 

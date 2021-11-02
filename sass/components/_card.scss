@@ -56,7 +56,9 @@
         width: 50%;
         z-index: 1;
         transition: all .2s;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     &__content .card__heading{
@@ -76,6 +78,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
 
     &__content .card__price{
@@ -92,7 +95,6 @@
     }
 
     &__quantity{
-        border: blue 4px solid;
         display: flex;
         justify-content: center;
     }
@@ -103,9 +105,28 @@
         justify-content: space-around;
     }
 
-    & .product_quantity {
+    & .card__quantity {
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
         
+        
+    }
+
+    & .product_quantity {
         width: 20%;
+    }
+
+    & input{
+        width: 30px;
+        font-size: 1.2em;
+        background-color: rgb(158, 146, 35);
+        color: white;
+    }
+
+    & .card_shop{
+        font-size: 1.5em;
+        background-color: dimgrey;
     }
     
 

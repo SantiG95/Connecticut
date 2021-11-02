@@ -177,6 +177,9 @@ footer p {
   width: 50%;
   z-index: 1;
   transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .card__content .card__heading {
   padding: 4%;
@@ -206,7 +209,6 @@ footer p {
   font-size: 30px;
 }
 .card__quantity {
-  border: blue 4px solid;
   display: flex;
   justify-content: center;
 }
@@ -215,8 +217,23 @@ footer p {
   width: 60%;
   justify-content: space-around;
 }
+.card .card__quantity {
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
 .card .product_quantity {
   width: 20%;
+}
+.card input {
+  width: 30px;
+  font-size: 1.2em;
+  background-color: #9e9223;
+  color: white;
+}
+.card .card_shop {
+  font-size: 1.5em;
+  background-color: dimgrey;
 }
 @media (max-width: 800px) {
   .card {
