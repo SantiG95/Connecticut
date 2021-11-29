@@ -235,32 +235,9 @@ footer p {
   font-size: 1.5em;
   background-color: dimgrey;
 }
-@media (max-width: 800px) {
-  .card {
-    max-width: 45%;
-    display: flex;
-  }
-  .card__content {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  .card__image {
-    height: 50%;
-    margin-left: 0;
-  }
-  .card__content .card__heading {
-    padding: 4%;
-    font-weight: bold;
-    margin-top: 3%;
-    height: 60px;
-  }
-  .card__content .card__description {
-    visibility: hidden;
-    height: 0px;
-  }
-  .card__content .card__price {
-    background-color: #e4990f;
+@media (max-width: 375px) {
+  .card label {
+    font-size: 0.4em;
   }
 }
 

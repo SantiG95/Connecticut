@@ -130,37 +130,9 @@
     }
     
 
-    @media (max-width: 800px){
-        max-width: 45%;
-        display: flex;
-        
-        &__content{
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        &__image{
-            height: 50%;
-            margin-left: 0;
-            
-        }
-
-        &__content .card__heading{
-            padding: 4%;
-            font-weight: bold;
-            margin-top: 3%;
-            height: 60px;
-        }
-
-        &__content .card__description{
-            visibility: hidden;
-            height: 0px;
-        }
-
-        &__content .card__price{
-            background-color: rgb(228, 153, 15);
-    
+    @media (max-width: 375px){
+        label{
+            font-size: 0.4em;
         }
 
         
