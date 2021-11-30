@@ -1,4 +1,7 @@
 var elemSecciones = document.getElementsByTagName("section");
+var contadorProductos = document.getElementsByClassName("cantidad-productos")
+
+var cantidadesProductos = [0,0,0,0]
 
 function Articulo(nombreArticulo, precio, imagen, marca, tipoArticulo){
     this.nombreArticulo = nombreArticulo
@@ -53,6 +56,7 @@ function Articulo(nombreArticulo, precio, imagen, marca, tipoArticulo){
 function agregarArticuloALaPagina(articulo){
     switch(articulo.getMarca()){
         case "Nintendo":
+            cantidadesProductos[0] += 1
             switch(articulo.getTipoArticulo()){
                 case "Consolas":
                     elemSecciones[0].getElementsByClassName("card-container")[0].innerHTML += articulo.getHtmlArticle();
@@ -68,6 +72,7 @@ function agregarArticuloALaPagina(articulo){
             break
 
         case "Playstation":
+            cantidadesProductos[1] += 1
             switch(articulo.getTipoArticulo()){
                 case "Consolas":
                     elemSecciones[1].getElementsByClassName("card-container")[0].innerHTML += articulo.getHtmlArticle();
@@ -80,6 +85,7 @@ function agregarArticuloALaPagina(articulo){
             break
 
             case "Xbox":
+                cantidadesProductos[2] += 1
                 switch(articulo.getTipoArticulo()){
                     case "Consolas":
                         elemSecciones[2].getElementsByClassName("card-container")[0].innerHTML += articulo.getHtmlArticle();
@@ -92,12 +98,19 @@ function agregarArticuloALaPagina(articulo){
                 break
 
             case "PC":
+                cantidadesProductos[3] += 1
                 switch(articulo.getTipoArticulo()){
                     case "Juegos":
                         elemSecciones[3].getElementsByClassName("card-container")[0].innerHTML += articulo.getHtmlArticle();
                         break
                 }
                 break
+    }
+}
+
+function actualizarContadorProductos(){
+    for(var i = 0; i < contadorProductos.length; i++){
+        contadorProductos[i].innerHTML = `Se encontraron ${cantidadesProductos[i]} productos`
     }
 }
 
@@ -482,3 +495,5 @@ agregarArticuloALaPagina(articulo35)
 agregarArticuloALaPagina(articulo36)
 agregarArticuloALaPagina(articulo37)
             
+
+actualizarContadorProductos()
