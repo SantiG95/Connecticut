@@ -22,6 +22,10 @@ main {
   margin: 3% 5%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #categorias__text {
   font-family: "Indie Flower", cursive;
   font-size: 60px;
@@ -165,6 +169,7 @@ footer p {
   transition: all 0.2s;
   position: relative;
   z-index: -1;
+  filter: drop-shadow(3px 5px 8px black);
 }
 .card:hover .card__image {
   transform: scale(1.1) rotate(355deg);
@@ -251,7 +256,6 @@ footer p {
 
 #cards__nintendo .card-container .card {
   background-color: #c20000;
-  background-image: url(../img/fondo-nintendo.png);
 }
 
 #cards__nintendo .card__content {
@@ -260,7 +264,6 @@ footer p {
 
 #cards__playstation .card-container .card {
   background-color: #0000af;
-  background-image: url(../img/fondo-playstation.png);
 }
 
 #cards__playstation .card__content {
@@ -269,7 +272,6 @@ footer p {
 
 #cards__xbox .card-container .card {
   background-color: #005c00;
-  background-image: url(../img/fondo-xbox.png);
 }
 
 #cards__xbox .card__content {
@@ -278,7 +280,6 @@ footer p {
 
 #cards__pc .card-container .card {
   background-color: #505050;
-  background-image: url(../img/fondo-pc.png);
 }
 
 #cards__pc .card__content {

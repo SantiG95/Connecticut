@@ -26,6 +26,4 @@ for(var i = 0; i < listaCartas.length; i++){
         console.log(`${this.parentElement.parentElement.getElementsByClassName("card__heading")[0].innerHTML}\nUnidades compradas: ${this.parentElement.getElementsByClassName("product_quantity")[0].innerHTML}`)
     })
     
-
-
 }
