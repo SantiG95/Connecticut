@@ -9,47 +9,6 @@
 
 </head>
 <body>
-    <header class="main-header">
-
-        <input type="checkbox" id="menu">
-
-        <nav class="nav-bar">
-            <ul class="nav-bar__nav-list">
-                <li class="nav-bar__nav-item">
-                    <a href="index.html" class="nav-bar__nav-link">Inicio</a>
-                </li>
-                <li class="nav-bar__nav-item">
-                    <a href="alta.html" class="nav-bar__nav-link">Alta</a>
-                </li>
-                <li class="nav-bar__nav-item">
-                    <a href="contacto.html" class="nav-bar__nav-link">Contacto</a>
-                </li>
-                <li class="nav-bar__nav-item">
-                    <a href="nosotros.html" class="nav-bar__nav-link">Nosotros</a>
-                </li>
-            </ul>
-        </nav> 
-        <div class="search-bar">
-            <div class="search-bar__logo-container">
-                <img id="logo-pagina" src="img/logo.png" alt="logo">
-            </div>
-            <form class="search-bar__form-container">
-                <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Buscar...">
-                <input class="search-bar__form-submit" type="submit" value="Buscar">
-            </form>
-            <div class="search-bar__carrito-container">
-                <img id="carritoImagen" src="img/carrito.png" alt="Carrito">
-            </div>
-
-            <div class="menu-toggle">
-                <label class="menu-toggle__label">
-                    <span class="menu-toggle__pan-arriba"></span>
-                    <span class="menu-toggle__medallon"></span>
-                    <span class="menu-toggle__pan-abajo"></span>
-                </label>
-            </div>
-        </div>
-    </header>
     <main>
         <p class="alta_mensaje">Si quieres vender un producto, rellena el siguiente formulario y 
             nosotros nos encargaremos de que se ponga a la venta lo antes posible</p>
@@ -59,25 +18,40 @@
                 <label for="nombreProducto">Nombre del producto:</label>
                 <input type="text" id="nombreProducto" name="nombreProducto" required placeholder="Nombre del producto">
             </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
+            </div>
 
             <div class="div_form">
                 <label for="marca">Marca o desarrollador:</label>
                 <input type="text" id="marca" name="marca" required placeholder="Marca o desarrollador">
+            </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
             </div>
 
             <div class="div_form">
                 <label for="precio">Precio de venta:</label>
                 <input type="number" id="precio" name="precio" required placeholder="Precio de venta" min="1">
             </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
+            </div>
 
             <div class="div_form">
                 <label for="stock">Stock a la venta:</label>
                 <input type="number" id="stock" name="stock" required placeholder="Stock" min="1">
             </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
+            </div>
 
             <div class="div_form">
                 <label for="descripcion">Descripcion:</label>
                 <textarea name="descripcion" id="descripcion" required cols="25" rows="5" placeholder="Descripcion del producto"></textarea>
+            </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
             </div>
 
             <div class="div_form">
@@ -102,15 +76,25 @@
                     </optgroup>
                 </select>
             </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
+            </div>
 
             <div class="div_form">
                 <label for="imagen">Imagen para mostrar:</label>
-                <input type="file" name="imagen" id="imagen" accept="image/png,image/jpeg" required>
+                <!--<input type="file" name="imagen" id="imagen" accept="image/png,image/jpeg" required>-->
+                <input type="text" name="imagen" id="imagen" required placeholder="URL de la imagen">
+            </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
             </div>
 
             <div class="div_form">
                 <label for="envio_gratis">Tiene envio gratis:</label>
                 <input type="checkbox" name="envio_gratis" id="envio_gratis">
+            </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
             </div>
 
             <h1>Vendedor</h1>
@@ -118,43 +102,32 @@
                 <label for="nombreVendedor">Nombre del vendedor:</label>
                 <input id="nombreVendedor" name="nombreVendedor" placeholder="Nombre del vendedor" required>
             </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
+            </div>
 
             <div class="div_form">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Email" required>
             </div>
+            <div class="div_error">
+                <div class="mensaje_error"></div>
+            </div>
 
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar" id="enviar">
 
         </form>
 
-    </main>
-    <footer>
-        <img src="img/logo.png" alt="logo" id="logo_footer">
-        <div id="mapa_del_sitio">
-            <p>Mapa del sitio</p>
-            <a href="index.html">Inicio</a>
-            <a href="alta.html">Alta</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="nosotros.html">Nosotros</a>
-        </div>
-        <div id="redes_sociales">
-            <p>Redes sociales</p>
+        <div class="lista_container">
             <div>
-                <a href="https://www.facebook.com" class="social_button" id="facebook_button">
-                    <img src="img/facebook.png" alt="facebook">
-                </a>
-                <a href="https://www.twitter.com" class="social_button" id="twitter_button">
-                    <img src="img/twitter.png" alt="twitter">
-                </a>
-                <a href="https://www.instagram.com" class="social_button" id="instagram_button">
-                    <img src="img/instagram.png" alt="instagram">
-                </a>
-                <a href="https://wa.me/123456789" class="social_button" id="whatsapp_button">
-                    <img src="img/whatsapp.png" alt="whatsapp">
-                </a>
+                <h1>Listado de productos</h1>
+            </div>
+            <div id="listado-productos"></div>
         </div>
 
-    </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/alta.js"></script>
 </body>
 </html>

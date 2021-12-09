@@ -14,18 +14,36 @@
         background-color: rgb(143, 130, 130);
     }
 
-    .div_form{
+    .div_form,
+    .div_error{
         display: flex;
         justify-content: space-between;
         margin: 2% 15%;
     }
 
+    .div_error{
+        justify-content: flex-end;
+        margin: -2% 15% 0;
+    }
+
+    & .mensaje_error{
+        width: 50%;
+        background-color: blue;
+        align-self: center;
+    }
+
     & label,
     & input,
     & select,
-    & textarea{
+    & textarea,
+    & .mensaje_error{
         font-size: 20px;
         margin: 0;
+        width: 250px;
+    }
+
+    & textarea{
+        resize: none;
     }
 
     & label{
@@ -87,4 +105,14 @@
         margin-left: 25%;
     }
 }
+}
+
+.lista_container{
+    margin: 3% 10%;
+    border: black 2px solid;
+    text-align: center;
+    box-shadow: 1px 1px 12px 2px rgba(0,0,0,0.73);
+    background-color: white;
+
+    
 }

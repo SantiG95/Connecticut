@@ -356,18 +356,37 @@ footer p {
   background-color: #8f8282;
 }
 .contacto_form .div_form,
-.alta_form .div_form {
+.contacto_form .div_error,
+.alta_form .div_form,
+.alta_form .div_error {
   display: flex;
   justify-content: space-between;
   margin: 2% 15%;
 }
-.contacto_form label, .contacto_form input, .contacto_form select, .contacto_form textarea,
+.contacto_form .div_error,
+.alta_form .div_error {
+  justify-content: flex-end;
+  margin: -2% 15% 0;
+}
+.contacto_form .mensaje_error,
+.alta_form .mensaje_error {
+  width: 50%;
+  background-color: blue;
+  align-self: center;
+}
+.contacto_form label, .contacto_form input, .contacto_form select, .contacto_form textarea, .contacto_form .mensaje_error,
 .alta_form label,
 .alta_form input,
 .alta_form select,
-.alta_form textarea {
+.alta_form textarea,
+.alta_form .mensaje_error {
   font-size: 20px;
   margin: 0;
+  width: 250px;
+}
+.contacto_form textarea,
+.alta_form textarea {
+  resize: none;
 }
 .contacto_form label,
 .alta_form label {
@@ -425,6 +444,14 @@ footer p {
     margin-left: 25%;
   }
 }
+.lista_container {
+  margin: 3% 10%;
+  border: black 2px solid;
+  text-align: center;
+  box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
+  background-color: white;
+}
+
 .social_button {
   width: 70px;
   height: 70px;
