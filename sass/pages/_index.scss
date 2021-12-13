@@ -1,3 +1,9 @@
+.main-id{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .section-cards{
     padding: 1em;
     margin: 100px 30px;
@@ -33,6 +39,7 @@
     padding: 30px;
     display: flex;
     flex-direction: column;
+    width: 800px;
 }
 
 #apartados-container{

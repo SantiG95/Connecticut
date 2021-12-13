@@ -1,37 +1,26 @@
-var campoNombre = document.getElementById("nombreProducto")
-var campoMarca = document.getElementById("marca")
-var campoPrecio = document.getElementById("precio")
-var campoStock = document.getElementById("stock")
-var campoDescripcion = document.getElementById("descripcion")
-var campoCategoria = document.getElementById("categoria")
-var campoImagen = document.getElementById("imagen")
-var campoEnvio = document.getElementById("envio_gratis")
+var inputs = [
+    document.getElementById("nombreProducto"), 
+    document.getElementById("marca"), 
+    document.getElementById("precio"), 
+    document.getElementById("stock"), 
+    document.getElementById("descripcion"), 
+    document.getElementById("categoria"), 
+    document.getElementById("imagen"), 
+    document.getElementById("envio_gratis"), 
+    document.getElementById("nombreVendedor"), 
+    document.getElementById("email")]
 
-var campoVendedor = document.getElementById("nombreVendedor")
-var campoEmail = document.getElementById("email")
+var camposValidos = [false, false, false, false, false, false, false, true, false, false]
 
 var mensajesError = document.querySelectorAll(".mensaje_error")
 
 var botonEnviar = document.getElementById("enviar")
 botonEnviar.disabled = true
 
-var inputs = [campoNombre, campoMarca, campoPrecio, campoStock, campoDescripcion, campoCategoria, campoImagen, campoEnvio, campoVendedor, campoEmail]
-var camposValidos = [false, false, false, false, false, false, false, true, false, false]
 
-var formulario = document.querySelector("form")
+var formularioAlta = document.querySelector(".alta_form")
 
-var productos = [
-    {nombre: "hola", 
-    marca: "sony", 
-    precio: "45", 
-    stock: "36", 
-    descripcion: "mi descripcion", 
-    categoria: "11", 
-    imagen: "https://www.google.com/logos/doodles/2021/seasonal-holidays-2021-6753651837109324-6752733080595603-cst.gif", 
-    envio: true, 
-    vendedor: "yo", 
-    email: "sangue@gmail.com"}
-]
+var productos = []
 
 
 inputs.forEach(campo => {
@@ -62,13 +51,13 @@ inputs.forEach(campo => {
 
         case "textarea":
             campo.addEventListener("input", () =>{
-                validarTexto(campoDescripcion)
+                validarTexto(campo)
             })
             break
 
         case "select-one":
             campo.addEventListener("input", () =>{
-                camposValidos[getIndex(campoCategoria)] = true
+                validarCategoria(campo)
             })
     }
 });
@@ -93,6 +82,7 @@ function validarTexto(campo){
         mensajesError[getIndex(campo)].innerText = ""
         camposValidos[getIndex(campo)] = true
     }
+    mensajesError[getIndex(campo)].style.visibility = !camposValidos[getIndex(campo)] ? "visible" : "hidden"
     validarCampos()
 }
 
@@ -109,6 +99,7 @@ function validarNumero(campo){
         mensajesError[getIndex(campo)].innerText = ""
         camposValidos[getIndex(campo)] = true
     }
+    mensajesError[getIndex(campo)].style.visibility = !camposValidos[getIndex(campo)] ? "visible" : "hidden"
     validarCampos()
 }
 
@@ -128,6 +119,7 @@ function validarEmail(campo){
         mensajesError[getIndex(campo)].innerText = ""
         camposValidos[getIndex(campo)] = true
     }
+    mensajesError[getIndex(campo)].style.visibility = !camposValidos[getIndex(campo)] ? "visible" : "hidden"
     validarCampos()
 }
 
@@ -141,6 +133,7 @@ function validarImagen(campo){
         mensajesError[getIndex(campo)].innerText = ""
         camposValidos[getIndex(campo)] = true
     }
+    mensajesError[getIndex(campo)].style.visibility = !camposValidos[getIndex(campo)] ? "visible" : "hidden"
     validarCampos()
 }
 
@@ -154,6 +147,7 @@ function validarCategoria(campo){
         mensajesError[getIndex(campo)].innerText = ""
         camposValidos[getIndex(campo)] = true
     }
+    mensajesError[getIndex(campo)].style.visibility = !camposValidos[getIndex(campo)] ? "visible" : "hidden"
     validarCampos()
 }
 
@@ -182,20 +176,19 @@ function getIndex(campo){
 
 /************************************************************************************ */
 
-formulario.addEventListener("submit", e =>{
+formularioAlta.addEventListener("submit", e =>{
     e.preventDefault()
-
     var producto = {
-        nombre: campoNombre.value,
-        marca: campoMarca.value,
-        precio: campoPrecio.value,
-        stock: campoStock.value,
-        descripcion: campoDescripcion.value, 
-        categoria: campoCategoria.value, 
-        imagen: campoImagen.value, 
-        envio: campoEnvio.checked, 
-        vendedor: campoVendedor.value, 
-        email: campoEmail.value
+        nombre: inputs[0].value,
+        marca: inputs[1].value,
+        precio: inputs[2].value,
+        stock: inputs[3].value,
+        descripcion: inputs[4].value, 
+        categoria: inputs[5].value, 
+        imagen: inputs[6].value, 
+        envio: inputs[7].checked, 
+        vendedor: inputs[8].value, 
+        email: inputs[9].value
         }
 
     
@@ -203,13 +196,16 @@ formulario.addEventListener("submit", e =>{
         if(input.type == "select-one"){
             input.value = "00"
         }
+        else if(input.type == "checkbox"){
+            input.checked = false
+        }
         else{
             input.value = ""
         }
     })
-    campoEnvio.checked = false
 
     productos.push(producto)
+    document.querySelector(".lista_container").style.visibility = "visible"
     renderProductos()
 })
 

@@ -28,8 +28,11 @@
 
     & .mensaje_error{
         width: 50%;
-        background-color: blue;
+        color: white;
+        background-color: red;
+        border: rgb(189, 7, 7) 6px solid;
         align-self: center;
+        visibility : hidden;
     }
 
     & label,
@@ -113,6 +116,10 @@
     text-align: center;
     box-shadow: 1px 1px 12px 2px rgba(0,0,0,0.73);
     background-color: white;
+    visibility: hidden;
+}
 
-    
+#listado-productos{
+    display: flex;
+    justify-content: center;
 }

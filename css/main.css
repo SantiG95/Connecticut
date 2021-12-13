@@ -371,8 +371,11 @@ footer p {
 .contacto_form .mensaje_error,
 .alta_form .mensaje_error {
   width: 50%;
-  background-color: blue;
+  color: white;
+  background-color: red;
+  border: #bd0707 6px solid;
   align-self: center;
+  visibility: hidden;
 }
 .contacto_form label, .contacto_form input, .contacto_form select, .contacto_form textarea, .contacto_form .mensaje_error,
 .alta_form label,
@@ -450,6 +453,12 @@ footer p {
   text-align: center;
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
   background-color: white;
+  visibility: hidden;
+}
+
+#listado-productos {
+  display: flex;
+  justify-content: center;
 }
 
 .social_button {
@@ -787,6 +796,12 @@ footer #redes_sociales div {
     height: 30px;
   }
 }
+.main-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .section-cards {
   padding: 1em;
   margin: 100px 30px;
@@ -821,6 +836,7 @@ footer #redes_sociales div {
   padding: 30px;
   display: flex;
   flex-direction: column;
+  width: 800px;
 }
 
 #apartados-container {

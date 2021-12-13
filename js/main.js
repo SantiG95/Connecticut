@@ -1,9 +1,7 @@
 console.log(document.querySelector('title').textContent)
 
 
-
-//function ajax(url, metodo = 'get') {    // argumentos con valores por default
-function ajax(url, metodo) {    // argumentos con valores por default
+function ajax(url, metodo) {
     let xhr = new XMLHttpRequest
     xhr.open(metodo || 'get', url)
     xhr.send()
@@ -12,8 +10,7 @@ function ajax(url, metodo) {    // argumentos con valores por default
 }
 
 function getNombreArchivo(id) {
-    //return 'plantillas/' + (id? id : 'home') + '.html'      // operador ternario
-    return 'plantillas/' + (id || 'home') + '.html'      // short circuit operator
+    return 'plantillas/' + (id || 'home') + '.html'
 }
 
 function marcarLink(id) {
@@ -29,19 +26,18 @@ let header = document.querySelector('header')
 let archivoHeader = getNombreArchivo('header')
 let xhr = ajax(archivoHeader)
 
-/* Carga del footer */
-let footer = document.querySelector('footer')
-let archivoFooter = getNombreArchivo('footer')
-let xhr2 = ajax(archivoFooter)
-
-
-
 xhr.addEventListener('load', () => {
     if (xhr.status == 200) {
         header.innerHTML = xhr.response
         getPlantillas()
     }
 })
+
+
+/* Carga del footer */
+let footer = document.querySelector('footer')
+let archivoFooter = getNombreArchivo('footer')
+let xhr2 = ajax(archivoFooter)
 
 xhr2.addEventListener("load", () =>{
     if(xhr2.status == 200){
@@ -84,7 +80,7 @@ function getPlantillas() {
         }
     })
 
-    /* Carga de cada uno de los contenidos según la bavegación local */
+    /* Carga de cada uno de los links de la navbar */
     let links = document.querySelectorAll('a')
     console.log(links)
 
@@ -123,8 +119,6 @@ function getPlantillas() {
                         scriptCard.src = "../js/card.js"
                         document.getElementById("scripts-auxiliares").appendChild(scriptCard)
                     })
-                    
-                    
                 }
 
                 else if(location.hash.slice(1) == "alta"){
@@ -135,7 +129,5 @@ function getPlantillas() {
             }
         })
     })
-
-
 }
 
