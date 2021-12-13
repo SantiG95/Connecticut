@@ -69,19 +69,14 @@ function getPlantillas() {
                 scriptListado.src = "../js/listado.js"
                 document.getElementById("scripts-auxiliares").appendChild(scriptListado)
 
-                let scriptCard = document.createElement("script")
-                scriptCard.src = "../js/card.js"
-                document.getElementById("scripts-auxiliares").appendChild(scriptCard)
+                scriptListado.addEventListener("load", () =>{
+                    let scriptCard = document.createElement("script")
+                    scriptCard.src = "../js/card.js"
+                    document.getElementById("scripts-auxiliares").appendChild(scriptCard)
+                })
             }
 
             else if(location.hash.slice(1) == "alta"){
-                let scriptHandlebars = document.createElement("script")
-                scriptHandlebars.src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
-                scriptHandlebars.integrity = "sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
-                scriptHandlebars.crossOrigin = "anonymous"
-                scriptHandlebars. referrerPolicy = "no-referrer"
-                document.getElementById("scripts-auxiliares").appendChild(scriptHandlebars)
-
                 let scriptAlta = document.createElement("script")
                 scriptAlta.src = "../js/alta.js"
                 document.getElementById("scripts-auxiliares").appendChild(scriptAlta)
@@ -123,19 +118,16 @@ function getPlantillas() {
                     scriptListado.src = "../js/listado.js"
                     document.getElementById("scripts-auxiliares").appendChild(scriptListado)
     
-                    let scriptCard = document.createElement("script")
-                    scriptCard.src = "../js/card.js"
-                    document.getElementById("scripts-auxiliares").appendChild(scriptCard)
+                    scriptListado.addEventListener("load", () =>{
+                        let scriptCard = document.createElement("script")
+                        scriptCard.src = "../js/card.js"
+                        document.getElementById("scripts-auxiliares").appendChild(scriptCard)
+                    })
+                    
+                    
                 }
 
                 else if(location.hash.slice(1) == "alta"){
-                    let scriptHandlebars = document.createElement("script")
-                    scriptHandlebars.src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
-                    scriptHandlebars.integrity = "sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
-                    scriptHandlebars.crossOrigin = "anonymous"
-                    scriptHandlebars. referrerPolicy = "no-referrer"
-                    document.getElementById("scripts-auxiliares").appendChild(scriptHandlebars)
-    
                     let scriptAlta = document.createElement("script")
                     scriptAlta.src = "../js/alta.js"
                     document.getElementById("scripts-auxiliares").appendChild(scriptAlta)

@@ -23,7 +23,73 @@ function Articulo(nombreArticulo, precio, imagen, marca, tipoArticulo){
     }
 
     this.getHtmlArticle = function(){
-        return `
+        var xhr = new XMLHttpRequest
+        xhr.open("get", "plantillas/card.hbs")
+        xhr.addEventListener("load", () =>{
+            if(xhr.status == 200){
+                let plantillaHbs = xhr.response
+                
+                var template = Handlebars.compile(plantillaHbs)
+
+                let html = template(this)
+
+                switch(this.getMarca()){
+                    case "Nintendo":
+                        cantidadesProductos[0] += 1
+                        switch(this.getTipoArticulo()){
+                            case "Consolas":
+                                elemSecciones[0].getElementsByClassName("card-container")[0].innerHTML += html;
+                                break
+            
+                            case "Juegos":
+                                elemSecciones[0].getElementsByClassName("card-container")[1].innerHTML += html;
+                                break
+                                
+                            case "Amiibo":
+                                elemSecciones[0].getElementsByClassName("card-container")[2].innerHTML += html;
+                        }
+                        break
+            
+                    case "Playstation":
+                        cantidadesProductos[1] += 1
+                        switch(this.getTipoArticulo()){
+                            case "Consolas":
+                                elemSecciones[1].getElementsByClassName("card-container")[0].innerHTML += html;
+                                break
+            
+                            case "Juegos":
+                                elemSecciones[1].getElementsByClassName("card-container")[1].innerHTML += html;
+                                break
+                        }
+                        break
+            
+                        case "Xbox":
+                            cantidadesProductos[2] += 1
+                            switch(this.getTipoArticulo()){
+                                case "Consolas":
+                                    elemSecciones[2].getElementsByClassName("card-container")[0].innerHTML += html;
+                                    break
+                
+                                case "Juegos":
+                                    elemSecciones[2].getElementsByClassName("card-container")[1].innerHTML += html;
+                                    break
+                            }
+                            break
+            
+                        case "PC":
+                            cantidadesProductos[3] += 1
+                            switch(this.getTipoArticulo()){
+                                case "Juegos":
+                                    elemSecciones[3].getElementsByClassName("card-container")[0].innerHTML += html;
+                                    break
+                            }
+                            break
+                }
+            }
+        })
+        xhr.send()
+
+        /*return `
         <div class="card">
             <article class="card__article">
                 <div 
@@ -49,12 +115,13 @@ function Articulo(nombreArticulo, precio, imagen, marca, tipoArticulo){
                     <div class="card_shop">Comprar</div>
                 </div>
             </article>
-        </div>`
+        </div>`*/
     }
 }
 
 function agregarArticuloALaPagina(articulo){
-    switch(articulo.getMarca()){
+    articulo.getHtmlArticle()
+    /*switch(articulo.getMarca()){
         case "Nintendo":
             cantidadesProductos[0] += 1
             switch(articulo.getTipoArticulo()){
@@ -106,6 +173,7 @@ function agregarArticuloALaPagina(articulo){
                 }
                 break
     }
+    */
 }
 
 function actualizarContadorProductos(){

@@ -1,18 +1,18 @@
-let campoNombre = document.getElementById("nombreProducto")
-let campoMarca = document.getElementById("marca")
-let campoPrecio = document.getElementById("precio")
-let campoStock = document.getElementById("stock")
-let campoDescripcion = document.getElementById("descripcion")
-let campoCategoria = document.getElementById("categoria")
-let campoImagen = document.getElementById("imagen")
-let campoEnvio = document.getElementById("envio_gratis")
+var campoNombre = document.getElementById("nombreProducto")
+var campoMarca = document.getElementById("marca")
+var campoPrecio = document.getElementById("precio")
+var campoStock = document.getElementById("stock")
+var campoDescripcion = document.getElementById("descripcion")
+var campoCategoria = document.getElementById("categoria")
+var campoImagen = document.getElementById("imagen")
+var campoEnvio = document.getElementById("envio_gratis")
 
-let campoVendedor = document.getElementById("nombreVendedor")
-let campoEmail = document.getElementById("email")
+var campoVendedor = document.getElementById("nombreVendedor")
+var campoEmail = document.getElementById("email")
 
-let mensajesError = document.querySelectorAll(".mensaje_error")
+var mensajesError = document.querySelectorAll(".mensaje_error")
 
-let botonEnviar = document.getElementById("enviar")
+var botonEnviar = document.getElementById("enviar")
 botonEnviar.disabled = true
 
 var inputs = [campoNombre, campoMarca, campoPrecio, campoStock, campoDescripcion, campoCategoria, campoImagen, campoEnvio, campoVendedor, campoEmail]
@@ -20,7 +20,7 @@ var camposValidos = [false, false, false, false, false, false, false, true, fals
 
 var formulario = document.querySelector("form")
 
-let productos = [
+var productos = [
     {nombre: "hola", 
     marca: "sony", 
     precio: "45", 
@@ -78,7 +78,7 @@ inputs.forEach(campo => {
 
 /************************************************************************************ */
 function validarTexto(campo){
-    let largo = campo.value.trim().length
+    var largo = campo.value.trim().length
     camposValidos[getIndex(campo)] = false
     if(largo == 0){
         mensajesError[getIndex(campo)].innerText = "Campo obligatorio"
@@ -97,7 +97,7 @@ function validarTexto(campo){
 }
 
 function validarNumero(campo){
-    let valor = campo.value
+    var valor = campo.value
     camposValidos[getIndex(campo)] = false
     if(valor <= 0){
         mensajesError[getIndex(campo)].innerText = "Introduzca un valor mayor a 0"
@@ -113,10 +113,10 @@ function validarNumero(campo){
 }
 
 function validarEmail(campo){
-    let mail = campo.value.trim()
+    var mail = campo.value.trim()
     camposValidos[getIndex(campo)] = false
 
-    let validadorMail = /^\w+@\w+\.\w{2,3}(\.(ar|uy))?$/
+    var validadorMail = /^\w+@\w+\.\w{2,3}(\.(ar|uy))?$/
     
     if(mail.length == 0){
         mensajesError[getIndex(campo)].innerText = "Introduzca un email"
@@ -132,7 +132,7 @@ function validarEmail(campo){
 }
 
 function validarImagen(campo){
-    let valor = campo.value
+    var valor = campo.value
     camposValidos[getIndex(campo)] = false
     if(valor == ""){
         mensajesError[getIndex(campo)].innerText = "Eliga una imagen"
@@ -145,7 +145,7 @@ function validarImagen(campo){
 }
 
 function validarCategoria(campo){
-    let valor = campo.value
+    var valor = campo.value
     camposValidos[getIndex(campo)] = false
     if(valor == "00"){
         mensajesError[getIndex(campo)].innerText = "Eliga una categoria"
@@ -158,7 +158,7 @@ function validarCategoria(campo){
 }
 
 function validarCampos(){
-    let todosOK = true
+    var todosOK = true
     camposValidos.forEach(campo => {
         if(!campo) todosOK = false
     });
@@ -185,7 +185,7 @@ function getIndex(campo){
 formulario.addEventListener("submit", e =>{
     e.preventDefault()
 
-    let producto = {
+    var producto = {
         nombre: campoNombre.value,
         marca: campoMarca.value,
         precio: campoPrecio.value,
@@ -220,11 +220,11 @@ function renderProductos(){
     xhr.open("get", "plantillas/listado.hbs")
     xhr.addEventListener('load', () =>{
         if(xhr.status = 200){
-            let plantillaHbs = xhr.response
+            var plantillaHbs = xhr.response
 
             var template = Handlebars.compile(plantillaHbs)
 
-            let html = template({productos: productos})
+            var html = template({productos: productos})
 
             document.getElementById('listado-productos').innerHTML = html
         }
