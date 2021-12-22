@@ -6,7 +6,8 @@
     display: flex;
     flex-direction: column;
     //background-color: rgb(207, 0, 0);
-    background-color: rgb(126, 109, 109);
+    background-color: #fc6149;
+    height: 110px;
 }
 
 #menu{
@@ -22,7 +23,8 @@
             NAV BAR
 *********************************/
 .nav-bar{
-    font-size: 20px;
+    font-size: 14px;
+    height: 35px;
     //background-color: mediumturquoise;
 
 }
@@ -52,7 +54,7 @@
 
 .nav-bar__nav-link:hover{
     font-weight: bold;
-    background-color: rgb(70, 64, 64);
+    background-color: #d35643;
     
 }
 
@@ -64,12 +66,23 @@
     //background-color: olivedrab;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
+.search-bar__logo-container{
+    margin-left: 3%;
+}
 
 .search-bar__logo-container,
 .search-bar__form-container{
-    padding: 1em;
+    //padding: 1em;
+}
+
+#logo-pagina{
+    width: max-content;
+    height: 35%;
+    margin-top: 5px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.596));
 }
 
 .search-bar__form-container{
@@ -78,29 +91,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
+    height: 65px;
+    //padding: 8px 1px;
 }
 
 .search-bar__form-search{
-    font-size: 30px;
-    background-color: rgb(224, 216, 216);
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
     width: 70%;
-    flex-basis: 100%;
+    flex-basis: 60%;
+    padding: 7px 45px 9px 15px;
+    border: 2px solid rgb(184, 184, 184);
 }
+
+
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 
 .search-bar__form-submit{
     color: transparent;
-    font-size: 25px;
-    height: 40%;
+    //padding: 0px;
     background-color: transparent;
-    background: white;
+    //background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -35px;
+    border: none;
+    cursor: pointer;
+}
 
-    background-image: url(../img/lupa-icon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 30%;
-    
+.search-bar__form-submit__img{
+    max-width: 25px;
+    padding: 2px;
 }
 
 .search-bar__carrito-container{
@@ -110,10 +140,11 @@
     align-items: center;
     //background-color: goldenrod;
     margin: 0 5%;
+    height: 65px;
 }
 
 .search-bar__carrito-container img{
-    background-color: rgb(190, 190, 190);
+    background-color: #ffa99bd0;
     border-radius: 50%;
     margin: 5%;
 }
