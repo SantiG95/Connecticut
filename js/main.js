@@ -1,3 +1,5 @@
+
+
 console.log(document.querySelector('title').textContent)
 
 
@@ -70,6 +72,12 @@ function getPlantillas() {
                     scriptCard.src = "../js/card.js"
                     document.getElementById("scripts-auxiliares").appendChild(scriptCard)
                 })
+
+                scriptListado.addEventListener("load", () =>{
+                    let scriptSlideshow = document.createElement("script")
+                    scriptSlideshow.src = "../js/slideshow.js"
+                    document.getElementById("scripts-auxiliares").appendChild(scriptSlideshow)
+                })
             }
 
             else if(location.hash.slice(1) == "alta"){
@@ -82,7 +90,7 @@ function getPlantillas() {
 
     /* Carga de cada uno de los links de la navbar */
     let links = document.querySelectorAll('a')
-    console.log(links)
+    //console.log(links)
 
     links.forEach(link => {
         link.addEventListener('click', e => {
@@ -118,6 +126,12 @@ function getPlantillas() {
                         let scriptCard = document.createElement("script")
                         scriptCard.src = "../js/card.js"
                         document.getElementById("scripts-auxiliares").appendChild(scriptCard)
+                    })
+                    
+                    scriptListado.addEventListener("load", () =>{
+                        let scriptSlideshow = document.createElement("script")
+                        scriptSlideshow.src = "../js/slideshow.js"
+                        document.getElementById("scripts-auxiliares").appendChild(scriptSlideshow)
                     })
                 }
 

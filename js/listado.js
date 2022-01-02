@@ -85,6 +85,8 @@ function Articulo(nombreArticulo, precio, imagen, marca, tipoArticulo){
                             }
                             break
                 }
+
+                actualizarContadorProductos()
             }
         })
         xhr.send()
@@ -564,4 +566,3 @@ agregarArticuloALaPagina(articulo36)
 agregarArticuloALaPagina(articulo37)
             
 
-actualizarContadorProductos()

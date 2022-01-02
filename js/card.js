@@ -1,5 +1,5 @@
 var listaCartas = document.getElementsByClassName("card")
-console.log(listaCartas)
+//console.log(listaCartas)
 var listaStock  = []
 
 
