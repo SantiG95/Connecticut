@@ -12,7 +12,7 @@ function ajax(url, metodo) {
 }
 
 function getNombreArchivo(id) {
-    return 'plantillas/' + (id || 'home') + '.html'
+    return 'vistas/' + (id || 'home') + '.html'
 }
 
 function marcarLink(id) {
@@ -32,6 +32,10 @@ xhr.addEventListener('load', () => {
     if (xhr.status == 200) {
         header.innerHTML = xhr.response
         getPlantillas()
+
+        let scriptHTML = document.createElement("script")
+        scriptHTML.src = "../js/menu/carritoMenu.js"
+        document.getElementsByTagName("body")[0].appendChild(scriptHTML)
     }
 })
 
@@ -46,6 +50,8 @@ xhr2.addEventListener("load", () =>{
         footer.innerHTML = xhr2.response
     }
 })
+
+
 
 
 function getPlantillas() {

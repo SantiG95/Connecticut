@@ -227,4 +227,5 @@ function renderProductos(){
     })
     xhr.send()
 }
+
 renderProductos()
