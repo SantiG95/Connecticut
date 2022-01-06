@@ -10,14 +10,81 @@
 
 <body>
     <!-- Header -->
-    <header class="main-header"></header>
+    <header class="main-header">
+        <input type="checkbox" id="menu">
+
+<nav class="nav-bar">
+    <ul class="nav-bar__nav-list">
+        <li class="nav-bar__nav-item">
+            <a href="index.html" class="nav-bar__nav-link" id="home">Inicio</a>
+        </li>
+        <li class="nav-bar__nav-item">
+            <a href="alta.html" class="nav-bar__nav-link" id="alta">Alta</a>
+        </li>
+        <li class="nav-bar__nav-item">
+            <a href="contacto.html" class="nav-bar__nav-link" id="contacto">Contacto</a>
+        </li>
+        <li class="nav-bar__nav-item">
+            <a href="nosotros.html" class="nav-bar__nav-link" id="nosotros">Nosotros</a>
+        </li>
+    </ul>
+</nav> 
+<div class="search-bar">
+    <div class="search-bar__logo-container">
+        <a href="index.html" class="search-bar__" id="home"><img id="logo-pagina" src="img/logo.png" alt="logo"></a>
+    </div>
+    <form class="search-bar__form-container">
+        <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Buscar...">
+        <button class="search-bar__form-submit" type="submit" value="Buscar">
+            <img class="search-bar__form-submit__img" src="../img/lupa-icon.png" alt="Buscar">
+        </button>
+    </form>
+    <div class="search-bar__carrito-container">
+        <img id="carritoImagen" src="img/carrito.png" alt="Carrito">
+    </div>
+
+    <div class="menu-toggle">
+        <label class="menu-toggle__label">
+            <span class="menu-toggle__pan-arriba"></span>
+            <span class="menu-toggle__medallon"></span>
+            <span class="menu-toggle__pan-abajo"></span>
+        </label>
+    </div>
+</div>
+    </header>
 
     <!-- Carrito -->
     <div class="section-carrito"></div>
 
     <main></main>
 
-    <footer></footer>
+    <footer>
+        <div id="mapa_del_sitio">
+            <p>Mapa del sitio</p>
+            <a href="index.html">Inicio</a>
+            <a href="alta.html">Alta</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
+        </div>
+        <div id="redes_sociales">
+            <p>Redes sociales</p>
+            <div>
+                <a href="https://www.facebook.com" class="social_button" id="facebook_button">
+                    <img src="img/facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.twitter.com" class="social_button" id="twitter_button">
+                    <img src="img/twitter.png" alt="twitter">
+                </a>
+                <a href="https://www.instagram.com" class="social_button" id="instagram_button">
+                    <img src="img/instagram.png" alt="instagram">
+                </a>
+                <a href="https://wa.me/123456789" class="social_button" id="whatsapp_button">
+                    <img src="img/whatsapp.png" alt="whatsapp">
+                </a>
+            </div>
+        </div>
+        <img src="img/logo.png" alt="logo" id="logo_footer">
+    </footer>
     
     <!-- Código de librerías -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -43,9 +110,13 @@
     <script src="js/menu/contactoMenu.js"></script>
     <script src="js/menu/inicioMenu.js"></script>
     
-
+    <script src="js/slideshow.js"></script>
+    
     <!-- Codigo de arranque -->
     <script src="js/main.js"></script>
+
+
+
 
     <!-- Código auxiliar -->
     <div id="scripts-auxiliares"></div>

@@ -13,7 +13,7 @@ class ProductoController extends ProductoModel {
         let productoGuardado = await productoService.guardarProductosService(producto)
         this.productos.push(productoGuardado)
 
-        renderTablaAlta(null, this.productos)
+        renderProductos(this.productos)
     }
 
     async actualizarProducto(id){
@@ -25,7 +25,7 @@ class ProductoController extends ProductoModel {
         let index = this.productos.findIndex(producto => producto.id == productoActualizado.id)
         this.productos.splice(index, 1, productoActualizado)
 
-        renderTablaAlta(null, this.productos)
+        renderProductos(this.productos)
     }
 }
 

@@ -1,57 +1,72 @@
-var slideIndex = 1
-var tiempoCambio = 3000
-var timeOut1
-var timeOut2
+class Slideshow {
+    slideIndex = null
+    tiempoCambio = null
+    timeOut1 = null
+    timeOut2 = null
+    slides = null
+    dots = null
 
-var slides = document.getElementsByClassName("slideshow-container__images")
-var dots = document.getElementsByClassName("dot")
+    constructor(){
+        this.slideIndex = 1
+        this.tiempoCambio = 3000
 
-showSlides(slideIndex);
-cambiarImagenAuto()
+        this.slides = document.getElementsByClassName("slideshow-container__images")
+        this.dots = document.getElementsByClassName("dot")
+    }
 
-//Controles de los botones
-function plusSlides(n){
+    //Controles de los botones
+    plusSlides(n){
+        
+        this.showSlides(this.slideIndex += n)
+    }
+
+    //Control puntos
+    currentSlide(n){
+        
+        this.showSlides(this.slideIndex = n)
+    }
+
+    showSlides(n){
+        var i
     
-    showSlides(slideIndex += n)
+        if(n == null){
+            this.slideIndex++
+        }
+    
+        if(n > this.slides.length || (n == null && this.slideIndex > this.slides.length)){
+            this.slideIndex = 1
+        }
+    
+        if(n < 1){
+            this.slideIndex = this.slides.length
+        }
+    
+        for(i = 0; i < this.slides.length; i++){
+            this.slides[i].style.display = "none"
+        }
+        for(i = 0; i < this.dots.length; i++){
+            this.dots[i].className = this.dots[i].className.replace(" actual", "");
+        }
+    
+        console.log(this.slides[this.slideIndex-1])
+        this.slides[this.slideIndex-1].style.display = "block"
+        this.dots[this.slideIndex-1].className += " actual"
+    }
+
+    cambiarImagenAuto(){
+        if(location.hash.slice(1) == "home"){
+            this.timeOut1 = setTimeout(this.showSlides, 3000);
+            this.timeOut2 = setTimeout(this.cambiarImagenAuto, 3000)
+        }
+        
+    }
+
+    
 }
 
-//Control puntos
-function currentSlide(n){
-    
-    showSlides(slideIndex = n)
-}
+const slideshow = new Slideshow()
 
-function showSlides(n){
-    var i
-
-    if(n == null){
-        slideIndex++
-    }
-
-    if(n > slides.length || (n == null && slideIndex > slides.length)){
-        slideIndex = 1
-    }
-
-    if(n < 1){
-        slideIndex = slides.length
-    }
-
-    for(i = 0; i < slides.length; i++){
-        slides[i].style.display = "none"
-    }
-    for(i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace(" actual", "");
-    }
-
-    //console.log(slideIndex)
-    slides[slideIndex-1].style.display = "block"
-    dots[slideIndex-1].className += " actual"
-}
-
-function cambiarImagenAuto(){
-    if(location.hash.slice(1) == "home"){
-        timeOut1 = setTimeout(showSlides, 3000);
-        timeOut2 = setTimeout(cambiarImagenAuto, 3000)
-    }
-    
+async function initSlideshow(){
+    slideshow.showSlides(slideshow.slideIndex)
+    slideshow.cambiarImagenAuto()
 }

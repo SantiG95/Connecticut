@@ -84,7 +84,7 @@ html {
 }
 
 .alta_mensaje {
-  font-family: "Indie Flower", cursive;
+  font-family: "Roboto", cursive;
   font-size: 35px;
   text-align: center;
 }
@@ -348,6 +348,7 @@ footer p {
   text-align: center;
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
   background-color: rgba(175, 152, 152, 0.815);
+  font-family: "Roboto", cursive;
 }
 .contacto_form h1,
 .alta_form h1 {
