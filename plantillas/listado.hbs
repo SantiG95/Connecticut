@@ -30,6 +30,10 @@
                 {{/if}}
                 <td>{{vendedor}}</td>
                 <td>{{email}}</td>
+                <td>
+                    <button class="botonProducto" onclick="productoController.actualizarProducto({{id}})" disabled>Actualizar</button>
+                    <button class="botonProducto" onclick="productoController.borrarProducto({{id}})" disabled>Borrar</button>
+                </td>
             </tr>
         {{/each}}
     </table>

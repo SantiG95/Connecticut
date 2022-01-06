@@ -173,9 +173,11 @@ class FormularioAlta {
             
         if(todosOK){
             this.botonEnviar.disabled = false
+            desactivarBotonesProductos(false)
         }
         else{
             this.botonEnviar.disabled = true
+            desactivarBotonesProductos(true)
         }
             
     
@@ -213,6 +215,8 @@ class FormularioAlta {
                 input.value = ""
             }
         })
+        this.botonEnviar.disabled = true
+        desactivarBotonesProductos(true)
     }
 }
 
@@ -229,14 +233,24 @@ function renderProductos(productos){
             var html = template({productos})
 
             document.getElementById('listado-productos').innerHTML = html
+
+            botonesProducto = document.querySelectorAll(".botonProducto")
         }
     })
     xhr.send()
 }
 
+function desactivarBotonesProductos(bool){
+    botonesProducto.forEach(boton =>{
+        boton.disabled = bool
+    })
+}
+
 
 
 let formularioAlta = null
+
+let botonesProducto = null
 
 async function initAlta(){
     formularioAlta = new FormularioAlta(renderProductos, productoController.guardarProducto)

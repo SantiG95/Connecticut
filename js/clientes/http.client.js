@@ -30,7 +30,7 @@ class Http{
     /* Put */
     async put(url, id, dato){
         try{
-            return await fetch(url + id, {
+            return await fetch(`${url}/${id}`, {
                 method: 'put',
                 body: JSON.stringify(dato),
                 headers: {'content-type': 'application/json'}
@@ -45,7 +45,7 @@ class Http{
     /* Delete */
     async del(url, id){
         try{
-            return await fetch(url + id, {method: 'delete'})
+            return await fetch(`${url}/${id}`, {method: 'delete'})
             .then(rta => rta.json())
         }
         catch(error){

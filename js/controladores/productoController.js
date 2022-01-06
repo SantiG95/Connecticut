@@ -27,6 +27,15 @@ class ProductoController extends ProductoModel {
 
         renderProductos(this.productos)
     }
+
+    async borrarProducto(id){
+        let productoBorrado = await productoService.borrarProductoService(id)
+
+        let index = this.productos.findIndex(producto => producto.id == productoBorrado.id)
+        this.productos.splice(index, 1)
+
+        renderProductos(this.productos)
+    }
 }
 
 const productoController = new ProductoController()

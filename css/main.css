@@ -104,6 +104,10 @@ footer p {
   margin-bottom: 5%;
 }
 
+.lista_container {
+  font-family: "Roboto", cursive;
+}
+
 @media (max-width: 600px) {
   #categorias__text {
     font-size: 2.1em;
@@ -449,7 +453,7 @@ footer p {
   }
 }
 .lista_container {
-  margin: 3% 10%;
+  margin: 3% 0%;
   border: black 2px solid;
   text-align: center;
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
