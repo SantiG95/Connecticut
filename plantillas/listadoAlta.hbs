@@ -16,7 +16,7 @@
             <tr>
                 <td>{{nombre}}</td>
                 <td>{{marca}}</td>
-                <td>{{precio}}</td>
+                <td>${{precio}}</td>
                 <td>{{stock}}</td>
                 <td>{{descripcion}}</td>
                 <td>{{categoria}}</td>
@@ -31,8 +31,8 @@
                 <td>{{vendedor}}</td>
                 <td>{{email}}</td>
                 <td>
-                    <button class="botonProducto" onclick="productoController.actualizarProducto({{id}})" disabled>Actualizar</button>
-                    <button class="botonProducto" onclick="productoController.borrarProducto({{id}})" disabled>Borrar</button>
+                    <button class="botonProductoActualizar" onclick="productoController.actualizarProducto({{id}})" disabled>Actualizar</button>
+                    <button class="botonProductoBorrar" onclick="productoController.borrarProducto({{id}})">Borrar</button>
                 </td>
             </tr>
         {{/each}}

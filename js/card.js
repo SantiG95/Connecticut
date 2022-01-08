@@ -32,7 +32,7 @@ for(var i = 0; i < listaCartas.length; i++){
 
 function initCards(){
     var listaCartas = document.getElementsByClassName("card")
-
+    
     for(var i = 0; i < listaCartas.length; i++){
         //Se imprime en la consola el mensaje "Se compro (nombre del producto)" 
         //al hacer clic en la carta
@@ -58,5 +58,7 @@ function initCards(){
         
         })
         
+
+        //console.log(listaCartas[i].classList)
     }
 }

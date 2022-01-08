@@ -1,6 +1,7 @@
 async function renderPlantillaListado(listado){
-    let plantillaHbs = await fetch('plantillas/inicio.hbs').then(rta => rta.text())
+    let plantillaHbs = await fetch('plantillas/listadoInicio.hbs').then(rta => rta.text())
     var template = Handlebars.compile(plantillaHbs);
+    //console.log(listado)
     let html = template({listado})
     //Ajustar aca para cada seccion de la pagina
 
@@ -9,7 +10,8 @@ async function renderPlantillaListado(listado){
 
     document.getElementsByClassName('card-container')[0].innerHTML = html
 
-    console.log(document.getElementsByClassName("card"))
+    console.log()
+    document.querySelector(".section-cards__header p").innerHTML = `Se encontraron ${document.querySelectorAll(".card").length} productos`
 
     initCards()
 }
@@ -25,5 +27,4 @@ async function initInicio(){
     initSlideshow()
     var productos = await productoController.obtenerProductos()
     await renderPlantillaListado(productos)
-    document.querySelector(".section-cards__header p").innerHTML = "Se encontraron algunos productos"
 }

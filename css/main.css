@@ -290,6 +290,38 @@ footer p {
   background: linear-gradient(180deg, #acacac 15%, #262626 57%);
 }
 
+.Nintendo {
+  background-color: #c20000;
+}
+
+.Nintendo .card__content {
+  background: linear-gradient(180deg, #ff3300 15%, #4b0000 57%);
+}
+
+.Playstation {
+  background-color: #0000af;
+}
+
+.Playstation .card__content {
+  background: linear-gradient(180deg, #0066ff 15%, #000047 57%);
+}
+
+.Xbox {
+  background-color: #005c00;
+}
+
+.Xbox .card__content {
+  background: linear-gradient(180deg, #01a701 15%, #002700 57%);
+}
+
+.PC {
+  background-color: #505050;
+}
+
+.PC .card__content {
+  background: linear-gradient(180deg, #acacac 15%, #262626 57%);
+}
+
 .logo-nintendo,
 .logo-playstation,
 .logo-xbox,

@@ -234,7 +234,7 @@ function renderProductos(productos){
 
             document.getElementById('listado-productos').innerHTML = html
 
-            botonesProducto = document.querySelectorAll(".botonProducto")
+            botonesProducto = document.querySelectorAll(".botonProductoActualizar")
         }
     })
     xhr.send()

@@ -188,3 +188,35 @@
     background: linear-gradient(180deg, rgb(172, 172, 172) 15%, rgba(38,38,38,1) 57%);
 }
 
+
+.Nintendo{
+    background-color: rgb(194, 0, 0);
+}
+
+.Nintendo .card__content{
+    background: linear-gradient(180deg, rgb(255, 51, 0) 15%, rgb(75, 0, 0) 57%);
+}
+
+.Playstation{
+    background-color:  rgb(0, 0, 175);
+}
+
+.Playstation .card__content{
+    background: linear-gradient(180deg, rgb(0, 102, 255) 15%, rgb(0, 0, 71) 57%);
+}
+
+.Xbox{
+    background-color: rgb(0, 92, 0);
+}
+
+.Xbox .card__content{
+    background: linear-gradient(180deg, rgb(1, 167, 1) 15%, rgb(0, 39, 0) 57%);
+}
+
+.PC{
+    background-color: rgb(80, 80, 80);
+}
+
+.PC .card__content{
+    background: linear-gradient(180deg, rgb(172, 172, 172) 15%, rgba(38,38,38,1) 57%);
+}

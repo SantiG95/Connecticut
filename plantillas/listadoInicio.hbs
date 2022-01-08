@@ -1,5 +1,5 @@
 {{#each listado}}
-    <div class="card">
+    <div class="card {{this.categoria}}">
         <article class="card__article">
             <div 
                 class="card__image"
@@ -11,7 +11,7 @@
                 <h3 class="card__heading">{{this.nombre}}</h3>
                 
                 <div class="card__price">
-                    <p>{{{this.precio}}}</p>
+                    <p>${{{this.precio}}}</p>
                 </div>
                 <div class="card__quantity">
                     <input type="button" value="-">
