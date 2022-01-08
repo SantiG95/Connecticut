@@ -213,7 +213,7 @@ formularioAlta.addEventListener("submit", e =>{
 
 function renderProductos(){
     const xhr = new XMLHttpRequest
-    xhr.open("get", "plantillas/listado.hbs")
+    xhr.open("get", "plantillas/listadoAlta.hbs")
     xhr.addEventListener('load', () =>{
         if(xhr.status = 200){
             var plantillaHbs = xhr.response

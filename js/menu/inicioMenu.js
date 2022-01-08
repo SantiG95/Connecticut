@@ -3,7 +3,15 @@ async function renderPlantillaListado(listado){
     var template = Handlebars.compile(plantillaHbs);
     let html = template({listado})
     //Ajustar aca para cada seccion de la pagina
+
+    //console.log(html)
+
+
     document.getElementsByClassName('card-container')[0].innerHTML = html
+
+    console.log(document.getElementsByClassName("card"))
+
+    initCards()
 }
 
 function agregarCarrito(e, id, ref){
@@ -14,9 +22,8 @@ function agregarCarrito(e, id, ref){
 }
 
 async function initInicio(){
+    initSlideshow()
     var productos = await productoController.obtenerProductos()
     await renderPlantillaListado(productos)
-
     document.querySelector(".section-cards__header p").innerHTML = "Se encontraron algunos productos"
-    initSlideshow()
 }

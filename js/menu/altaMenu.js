@@ -223,7 +223,7 @@ class FormularioAlta {
 function renderProductos(productos){
     document.querySelector(".lista_container").style.visibility = "visible"
     const xhr = new XMLHttpRequest
-    xhr.open("get", "plantillas/listado.hbs")
+    xhr.open("get", "plantillas/listadoAlta.hbs")
     xhr.addEventListener('load', () =>{
         if(xhr.status = 200){
             var plantillaHbs = xhr.response

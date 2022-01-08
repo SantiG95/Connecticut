@@ -1,0 +1,28 @@
+{{#each listado}}
+    <div class="card">
+        <article class="card__article">
+            <div 
+                class="card__image"
+                style="background-image: url('{{{this.imagen}}}');"
+            >
+            </div>
+
+            <div class="card__content">
+                <h3 class="card__heading">{{this.nombre}}</h3>
+                
+                <div class="card__price">
+                    <p>{{{this.precio}}}</p>
+                </div>
+                <div class="card__quantity">
+                    <input type="button" value="-">
+                    <span>
+                        <label for="">Cantidad: </label>
+                        <p class="product_quantity">0</p>
+                    </span>
+                    <input type="button" value="+">
+                </div>
+                <div class="card_shop">Comprar</div>
+            </div>
+        </article>
+    </div>
+{{/each}}

@@ -25,7 +25,7 @@ class Main{
                 initAlta()
                 break
 
-            case "inicio":
+            case "home":
                 initInicio()
                 break
 

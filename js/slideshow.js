@@ -32,7 +32,7 @@ class Slideshow {
         if(n == null){
             this.slideIndex++
         }
-    
+        
         if(n > this.slides.length || (n == null && this.slideIndex > this.slides.length)){
             this.slideIndex = 1
         }
@@ -48,16 +48,13 @@ class Slideshow {
             this.dots[i].className = this.dots[i].className.replace(" actual", "");
         }
     
-        console.log(this.slides[this.slideIndex-1])
+        //console.log(this.slides[this.slideIndex-1])
         this.slides[this.slideIndex-1].style.display = "block"
         this.dots[this.slideIndex-1].className += " actual"
     }
 
     cambiarImagenAuto(){
-        if(location.hash.slice(1) == "home"){
-            this.timeOut1 = setTimeout(this.showSlides, 3000);
-            this.timeOut2 = setTimeout(this.cambiarImagenAuto, 3000)
-        }
+        
         
     }
 
@@ -66,7 +63,13 @@ class Slideshow {
 
 const slideshow = new Slideshow()
 
+function cambiarImagenAuto(n){
+    if(location.hash.slice(1) == "home"){
+        slideshow.showSlides(n)
+        setTimeout(cambiarImagenAuto, 3000)
+    }
+}
+
 async function initSlideshow(){
-    slideshow.showSlides(slideshow.slideIndex)
-    slideshow.cambiarImagenAuto()
+    cambiarImagenAuto(slideshow.slideIndex)
 }

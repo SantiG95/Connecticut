@@ -3,7 +3,7 @@ class ProductoService{
 
     async obtenerProductosService(){
         let productos = await http.get(this.URL_PRODUCTOS)
-        console.log(productos)
+        //console.log(productos)
         return productos
     }
 
