@@ -23,8 +23,19 @@ function agregarCarrito(e, id, ref){
     carritoController.agregarCarrito(producto)
 }
 
+function configurarCategorias(){
+    let botonesCategoria = document.getElementsByClassName("categoria")
+    let listaProductos = document.getElementsByClassName("card")
+
+    
+}
+
+
+
 async function initInicio(){
     initSlideshow()
     var productos = await productoController.obtenerProductos()
     await renderPlantillaListado(productos)
+    configurarCategorias()
 }
+

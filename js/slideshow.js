@@ -64,7 +64,7 @@ class Slideshow {
 const slideshow = new Slideshow()
 
 function cambiarImagenAuto(n){
-    if(location.hash.slice(1) == "home"){
+    if(location.hash.slice(1) == "home" || !location.hash){
         slideshow.showSlides(n)
         setTimeout(cambiarImagenAuto, 3000)
     }

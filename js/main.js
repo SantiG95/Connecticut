@@ -50,7 +50,7 @@ class Main{
     }
 
     async cargarPlantillas(){
-        let id = location.hash.slice(1) || "Home"
+        let id = location.hash.slice(1) || "home"
         this.marcarLink(id)
         await this.cargarPlantilla(id)
 

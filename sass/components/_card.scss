@@ -6,7 +6,7 @@
     max-width: 500px;
     height: 220px;
     overflow: hidden;
-    display: block;
+    display: none;
     position: relative;
     isolation: isolate;
     color: #fcfdfe;
@@ -140,6 +140,10 @@
     }
 }
 
+.visible{
+    display: block;
+}
+
 
 
 #cards__nintendo .card-container .card,
@@ -220,3 +224,4 @@
 .PC .card__content{
     background: linear-gradient(180deg, rgb(172, 172, 172) 15%, rgba(38,38,38,1) 57%);
 }
+
