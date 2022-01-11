@@ -622,17 +622,14 @@ footer p {
   position: fixed;
   background-color: #f1f2f3;
   z-index: 1;
-  top: 150px;
-  left: 150px;
-  right: 150px;
-  bottom: 150px;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
   box-shadow: 0.3em 0.3em 10em 0.3em black;
 }
 .section-carrito--visible {
   display: block;
-}
-.section-carrito:hover {
-  cursor: pointer;
 }
 .section-carrito table {
   width: 95%;
@@ -1035,16 +1032,31 @@ footer #logo_footer {
 #categorias {
   text-align: center;
   border: #8d7b7b 2px solid;
-  padding: 30px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 60%;
 }
 
 #apartados-container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.divisor-categoria {
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  margin: 15px 0;
+}
+
+.div-categoria {
+  display: flex;
+  flex-direction: row;
+}
+
+.div-categoria label {
+  margin: 0 20px;
 }
 
 @media (max-width: 860px) {

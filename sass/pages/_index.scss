@@ -36,16 +36,35 @@
 #categorias{
     text-align: center;
     border: rgb(141, 123, 123) 2px solid;
-    padding: 30px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 60%;
 }
 
 #apartados-container{
+    //border: blue 4px solid;
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.divisor-categoria{
+    //border: brown 4px solid;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    margin: 15px 0;
+
+}
+
+.div-categoria{
+    display: flex;
+    flex-direction: row;
+}
+
+.div-categoria label{
+    margin: 0 20px;
 }
 
 @media (max-width: 860px){
