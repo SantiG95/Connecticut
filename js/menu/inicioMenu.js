@@ -20,7 +20,7 @@ function agregarCarrito(e, id, ref){
     e.preventDefault()
 
     let producto = productoController.productos.find(producto => producto.id == id)
-    carritoController.agregarCarrito(producto)
+    carritoController.agregarAlCarrito(producto)
 }
 
 function configurarCategorias(){

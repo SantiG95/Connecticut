@@ -18,7 +18,8 @@ class CarritoController extends CarritoModel{
         return this.carrito.find(prod => prod.id == producto.id)
     }
 
-    agregarAlCarrito(){
+    agregarAlCarrito(producto){
+        console.log(producto)
         if(!this.productoEstaEnElCarrito(producto)){
             producto.cantidad = 1
             this.carrito.push(producto)

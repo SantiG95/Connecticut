@@ -1,5 +1,5 @@
 {{#each listado}}
-    <div class="card {{this.categoria}} visible">
+    <div class="card {{this.categoria}} visible " onclick="agregarCarrito(event,{{id}},this)">
         <article class="card__article">
             <div 
                 class="card__image"
