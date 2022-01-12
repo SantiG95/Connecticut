@@ -1,7 +1,7 @@
 
 .contacto_form,
 .alta_form{
-    margin: 0 10%;
+    margin: 0 25%;
     border: black 2px solid;
     text-align: center;
     box-shadow: 1px 1px 12px 2px rgba(0,0,0,0.73);
@@ -117,16 +117,17 @@
 }
 
 .lista_container{
-    margin: 3% 0%;
+    margin: 3% 14%;
     border: black 2px solid;
     text-align: center;
     box-shadow: 1px 1px 12px 2px rgba(0,0,0,0.73);
     background-color: white;
     visibility: hidden;
+    justify-content: center;
 }
 
 #listado-productos{
-    display: flex;
+    //display: flex;
     justify-content: center;
     margin: 2%;
     overflow-x: auto;

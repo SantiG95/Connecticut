@@ -100,6 +100,29 @@ class filtroController{
         this.cambiarVisibilidad()
     }
 
+    aplicarFiltroParticular(int){
+        this.checkboxesMarcados = [[],[]]
+        this.marcados = 1
+        switch(int){
+            case 0:
+                this.checkboxesMarcados[0].push("Nintendo")
+                break
+
+            case 1:
+                this.checkboxesMarcados[0].push("Playstation")
+                break
+
+            case 2:
+                this.checkboxesMarcados[0].push("Xbox")
+                break
+
+            case 3:
+                this.checkboxesMarcados[0].push("PC")
+                break
+        }
+        this.cambiarVisibilidad()
+    }
+
 
 
     cambiarVisibilidad(){

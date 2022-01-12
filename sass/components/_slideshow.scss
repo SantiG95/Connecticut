@@ -1,12 +1,9 @@
-
-
 .slideshow-container{
     max-width: 80%;
-    
     position: relative;
     margin: auto;
     margin-bottom: 1em;
-    background-color: purple;
+    cursor: pointer;
 
     &__images{
         display: none;
@@ -14,13 +11,12 @@
 
     & img{
         max-width: 100%;
-        max-width: 100%;
 
     }
 
     & .prev,
     & .next{
-        cursor: pointer;
+        
         position: absolute;
         top: 50%;
         width: auto;

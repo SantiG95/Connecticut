@@ -73,3 +73,13 @@ function cambiarImagenAuto(n){
 async function initSlideshow(){
     cambiarImagenAuto(slideshow.slideIndex)
 }
+
+function cambiarCategorias(intMarca){
+    var inputs = document.querySelectorAll(".checkboxCategoria")
+    inputs.forEach(checkbox => {
+        checkbox.checked = false
+    });
+    inputs[intMarca].checked = true
+    filtro.aplicarFiltroParticular(intMarca)
+    
+}
