@@ -5,14 +5,14 @@
     border: black 2px solid;
     text-align: center;
     box-shadow: 1px 1px 12px 2px rgba(0,0,0,0.73);
-    background-color: rgba(175, 152, 152, 0.815);
+    background-color: rgba(240, 213, 198, 0.815);
     font-family: 'Roboto', cursive;
 
 
     & h1{
         color: white;
         padding: 2% 0;
-        background-color: rgb(143, 130, 130);
+        background-color: #fd715b;
     }
 
     .div_form,
@@ -28,6 +28,7 @@
     }
 
     & .mensaje_error{
+        position: static;
         width: 50%;
         color: white;
         background-color: red;
@@ -40,19 +41,21 @@
     & label,
     & input,
     & select,
-    & textarea,
-    & .mensaje_error{
+    & textarea
+    {
         font-size: 20px;
         margin: 0;
-        width: 250px;
+        width: 40em;
+    }
+
+    & label,
+    & input{
+        text-align: center;
     }
 
     & textarea{
         resize: none;
-    }
-
-    & label{
-        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     [type='checkbox']{
@@ -64,6 +67,7 @@
         font-size: 30px;
         padding: 5px;
         margin-bottom: 3%;
+        width: 50%;
     }
 }
 
@@ -124,4 +128,24 @@
 #listado-productos{
     display: flex;
     justify-content: center;
+    margin: 2%;
+    overflow-x: auto;
+
+    tr:nth-of-type(2n){
+        background-color: rgb(206, 205, 205);
+    }
+    tr:nth-of-type(2n+1){
+        background-color: rgb(236, 236, 236);
+    }
+    tr:nth-of-type(1){
+        background-color: rgb(173, 173, 173);
+    }
+}
+
+.valido{
+    opacity: 100%;
+}
+.invalido{
+    opacity: 0%;
+    pointer-events: none;
 }

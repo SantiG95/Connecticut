@@ -11,24 +11,27 @@
     right: 100px;
     bottom: 100px;
     box-shadow: .3em .3em 10em .3em rgba(0, 0, 0, 1);
+
     
     &--visible {
         display: block;
     }
 
-    &:hover{
-        //cursor: pointer;
+    & .vacio {
+        display: flex;
+        justify-content: center;
     }
 
     table {
         width: 95%;
         margin: 10px auto;
+        font-size: 1.2em;
     }
 
     table,th,td {
-        border: 1px solid black;
         border-collapse: collapse;
         padding: 5px;
+        text-align: center;
     }
 
     table button {
@@ -49,6 +52,30 @@
         font-size: 1.1em;
         font-weight: bold;
     }
+
+    #delete-icon{
+        cursor: pointer;
+    }
+
+    div{
+        position: fixed;
+        left: 10%;
+        top: 13%;
+    }
+
+    tr:nth-of-type(2n){
+        background-color: #ffc0b6
+    }
+
+    tr:nth-of-type(2n+1){
+        background-color: #fddbd6
+    }
+
+    tr:nth-of-type(1){
+        background-color: #fc6149;
+        color: white;
+    }
+
 }
 
 

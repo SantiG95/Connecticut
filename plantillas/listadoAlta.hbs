@@ -11,6 +11,7 @@
             <th>Envio</th>
             <th>Vendedor</th>
             <th>Email</th>
+            <th>Accion</th>
         </tr>
         {{#each productos}}
             <tr>
@@ -31,8 +32,12 @@
                 <td>{{vendedor}}</td>
                 <td>{{email}}</td>
                 <td>
-                    <button class="botonProductoActualizar" onclick="productoController.actualizarProducto({{id}})" disabled>Actualizar</button>
-                    <button class="botonProductoBorrar" onclick="productoController.borrarProducto({{id}})">Borrar</button>
+                    <img class="botonProductoActualizar invalido" src="https://img.icons8.com/ios-glyphs/60/000000/approve-and-update--v1.png"
+                    onclick="productoController.actualizarProducto({{id}})" disabled
+                    >
+
+                    <img class="botonProductoBorrar" src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-delete-multimedia-kiranshastry-lineal-kiranshastry.png"
+                    onclick="productoController.borrarProducto({{id}})"/>
                 </td>
             </tr>
         {{/each}}

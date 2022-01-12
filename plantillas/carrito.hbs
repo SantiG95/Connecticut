@@ -1,23 +1,24 @@
 {{#if carrito.length }}
     <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>
+    <div></div>
     <table>
         <tr>
+            <th>Imagen</th>
             <th>Nombre</th>
             <th>Precio</th>
             <th>Marca</th>
-            <th>Foto</th>
             <th>Cantidad</th>
             <th>Envio</th>
             <th>Acción</th>
         </tr>
         {{#each carrito}}
             <tr>
-                <td>{{nombre}}</td>
-                <td>{{precio}}</td>
-                <td>{{marca}}</td>
                 <td>
                     <img style="display:block; margin: 0 auto;" src="{{imagen}}" width="50" alt="{{nombre}}"> 
                 </td>
+                <td>{{nombre}}</td>
+                <td>{{precio}}</td>
+                <td>{{marca}}</td>
                 <td>{{cantidad}}</td>
 
                 {{#if envio}}
@@ -26,11 +27,15 @@
                     <td>No</td>
                 {{/if}}
                 <td>
-                    <button onclick="carritoController.borrarProductoCarrito({{id}})">Borrar</button>
+                    <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-delete-multimedia-kiranshastry-lineal-kiranshastry.png"
+                    onclick="carritoController.borrarProductoCarrito({{id}})"
+                    id="delete-icon"/>
                 </td>
             </tr>
         {{/each}}
     </table>
 {{else}}
-    <h2>El carrito está vacío</h2>
+    <div class="vacio">
+        <h2>El carrito está vacío</h2>
+    </div>
 {{/if}}

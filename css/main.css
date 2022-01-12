@@ -27,59 +27,13 @@ html {
 }
 
 #categorias__text {
-  font-family: "Indie Flower", cursive;
+  font-family: "Roboto", cursive;
   font-size: 60px;
-  text-decoration: underline dotted;
-}
-
-#consola-text {
-  font-family: "Indie Flower", cursive;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  margin: 20px 20% 20px 20%;
-}
-
-#juegos-text {
-  font-family: "Indie Flower", cursive;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  margin: 20px 20% 20px 20%;
-}
-
-#amiibo-text {
-  font-family: "Indie Flower", cursive;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  margin: 20px 20% 20px 20%;
-}
-
-#apartado-nintendo #consola-text,
-#apartado-nintendo #juegos-text,
-#apartado-nintendo #amiibo-text {
-  background-color: red;
-}
-
-#apartado-playstation #consola-text,
-#apartado-playstation #juegos-text {
-  background-color: blue;
-}
-
-#apartado-xbox #consola-text,
-#apartado-xbox #juegos-text {
-  background-color: green;
-}
-
-#apartado-pc #juegos-text {
-  background-color: grey;
 }
 
 #cantidad-productos {
-  font-family: "Indie Flower", cursive;
+  font-family: "Roboto", cursive;
   font-size: 40px;
-  font-weight: bold;
   color: black;
 }
 
@@ -106,6 +60,10 @@ footer p {
 
 .lista_container {
   font-family: "Roboto", cursive;
+}
+
+.divisor-categoria label {
+  font-size: 1.5em;
 }
 
 @media (max-width: 600px) {
@@ -139,7 +97,7 @@ footer p {
   outline: none;
   flex-grow: 1;
   width: 400px;
-  max-width: 500px;
+  max-width: 400px;
   height: 220px;
   overflow: hidden;
   display: none;
@@ -147,12 +105,12 @@ footer p {
   isolation: isolate;
   color: #fcfdfe;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0 0 3px rgba(0, 0, 0, 0.4);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 7px;
   -moz-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-decoration: none;
+  cursor: pointer;
 }
 .card:hover, .card:focus {
   -moz-transform: scale(1.03);
@@ -168,7 +126,6 @@ footer p {
   background-repeat: no-repeat;
   height: 200px;
   margin-left: -50%;
-  width: 100;
   background-position: center;
   transition: all 0.2s;
   position: relative;
@@ -213,36 +170,15 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: double 10px;
 }
 .card__content .card__price p {
   font-size: 30px;
-}
-.card__quantity {
-  display: flex;
-  justify-content: center;
 }
 .card span {
   display: flex;
   width: 60%;
   justify-content: space-around;
-}
-.card .card__quantity {
-  font-size: 1.3em;
-  display: flex;
-  align-items: center;
-}
-.card .product_quantity {
-  width: 20%;
-}
-.card input {
-  width: 30px;
-  font-size: 1.2em;
-  background-color: #9e9223;
-  color: white;
-}
-.card .card_shop {
-  font-size: 1.5em;
-  background-color: dimgrey;
 }
 @media (max-width: 375px) {
   .card label {
@@ -254,46 +190,6 @@ footer p {
   display: block;
 }
 
-#cards__nintendo .card-container .card,
-#cards__playstation .card-container .card,
-#cards__xbox .card-container .card,
-#cards__pc .card-container .card {
-  background-attachment: fixed;
-  background-position: right;
-}
-
-#cards__nintendo .card-container .card {
-  background-color: #c20000;
-}
-
-#cards__nintendo .card__content {
-  background: linear-gradient(180deg, #ff3300 15%, #4b0000 57%);
-}
-
-#cards__playstation .card-container .card {
-  background-color: #0000af;
-}
-
-#cards__playstation .card__content {
-  background: linear-gradient(180deg, #0066ff 15%, #000047 57%);
-}
-
-#cards__xbox .card-container .card {
-  background-color: #005c00;
-}
-
-#cards__xbox .card__content {
-  background: linear-gradient(180deg, #01a701 15%, #002700 57%);
-}
-
-#cards__pc .card-container .card {
-  background-color: #505050;
-}
-
-#cards__pc .card__content {
-  background: linear-gradient(180deg, #acacac 15%, #262626 57%);
-}
-
 .Nintendo {
   background-color: #c20000;
 }
@@ -302,12 +198,23 @@ footer p {
   background: linear-gradient(180deg, #ff3300 15%, #4b0000 57%);
 }
 
+.Nintendo .card__price {
+  border-color: #ff3300;
+  background-color: #c20000;
+}
+
 .Playstation {
   background-color: #0000af;
 }
 
 .Playstation .card__content {
   background: linear-gradient(180deg, #0066ff 15%, #000047 57%);
+  border-color: #0000af;
+}
+
+.Playstation .card__price {
+  border-color: #0066ff;
+  background-color: #0000af;
 }
 
 .Xbox {
@@ -318,12 +225,22 @@ footer p {
   background: linear-gradient(180deg, #01a701 15%, #002700 57%);
 }
 
+.Xbox .card__price {
+  border-color: #01a701;
+  background-color: #005c00;
+}
+
 .PC {
   background-color: #505050;
 }
 
 .PC .card__content {
   background: linear-gradient(180deg, #acacac 15%, #262626 57%);
+}
+
+.PC .card__price {
+  border-color: #acacac;
+  background-color: #505050;
 }
 
 .logo-nintendo,
@@ -387,14 +304,14 @@ footer p {
   border: black 2px solid;
   text-align: center;
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
-  background-color: rgba(175, 152, 152, 0.815);
+  background-color: rgba(240, 213, 198, 0.815);
   font-family: "Roboto", cursive;
 }
 .contacto_form h1,
 .alta_form h1 {
   color: white;
   padding: 2% 0;
-  background-color: #8f8282;
+  background-color: #fd715b;
 }
 .contacto_form .div_form,
 .contacto_form .div_error,
@@ -411,6 +328,7 @@ footer p {
 }
 .contacto_form .mensaje_error,
 .alta_form .mensaje_error {
+  position: static;
   width: 50%;
   color: white;
   background-color: red;
@@ -418,23 +336,24 @@ footer p {
   align-self: center;
   visibility: hidden;
 }
-.contacto_form label, .contacto_form input, .contacto_form select, .contacto_form textarea, .contacto_form .mensaje_error,
+.contacto_form label, .contacto_form input, .contacto_form select, .contacto_form textarea,
 .alta_form label,
 .alta_form input,
 .alta_form select,
-.alta_form textarea,
-.alta_form .mensaje_error {
+.alta_form textarea {
   font-size: 20px;
   margin: 0;
-  width: 250px;
+  width: 40em;
+}
+.contacto_form label, .contacto_form input,
+.alta_form label,
+.alta_form input {
+  text-align: center;
 }
 .contacto_form textarea,
 .alta_form textarea {
   resize: none;
-}
-.contacto_form label,
-.alta_form label {
-  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .contacto_form [type=checkbox],
 .alta_form [type=checkbox] {
@@ -446,6 +365,7 @@ footer p {
   font-size: 30px;
   padding: 5px;
   margin-bottom: 3%;
+  width: 50%;
 }
 
 @media (max-width: 600px) {
@@ -500,6 +420,26 @@ footer p {
 #listado-productos {
   display: flex;
   justify-content: center;
+  margin: 2%;
+  overflow-x: auto;
+}
+#listado-productos tr:nth-of-type(2n) {
+  background-color: #cecdcd;
+}
+#listado-productos tr:nth-of-type(2n+1) {
+  background-color: #ececec;
+}
+#listado-productos tr:nth-of-type(1) {
+  background-color: #adadad;
+}
+
+.valido {
+  opacity: 100%;
+}
+
+.invalido {
+  opacity: 0%;
+  pointer-events: none;
 }
 
 .social_button {
@@ -631,14 +571,19 @@ footer p {
 .section-carrito--visible {
   display: block;
 }
+.section-carrito .vacio {
+  display: flex;
+  justify-content: center;
+}
 .section-carrito table {
   width: 95%;
   margin: 10px auto;
+  font-size: 1.2em;
 }
 .section-carrito table, .section-carrito th, .section-carrito td {
-  border: 1px solid black;
   border-collapse: collapse;
   padding: 5px;
+  text-align: center;
 }
 .section-carrito table button {
   margin-top: 10px;
@@ -656,6 +601,24 @@ footer p {
   height: 35px;
   font-size: 1.1em;
   font-weight: bold;
+}
+.section-carrito #delete-icon {
+  cursor: pointer;
+}
+.section-carrito div {
+  position: fixed;
+  left: 10%;
+  top: 13%;
+}
+.section-carrito tr:nth-of-type(2n) {
+  background-color: #ffc0b6;
+}
+.section-carrito tr:nth-of-type(2n+1) {
+  background-color: #fddbd6;
+}
+.section-carrito tr:nth-of-type(1) {
+  background-color: #fc6149;
+  color: white;
 }
 
 /*********************************
@@ -1003,12 +966,12 @@ footer #logo_footer {
 
 .section-cards {
   padding: 1em;
-  margin: 100px 30px;
+  margin: 1.5em 30px;
   text-align: center;
   border-radius: 30px;
   background-attachment: fixed;
   box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.73);
-  background-color: rgba(175, 152, 152, 0.815);
+  background-color: rgba(240, 213, 198, 0.815);
 }
 
 .card-container {
@@ -1057,6 +1020,10 @@ footer #logo_footer {
 
 .div-categoria label {
   margin: 0 20px;
+}
+
+#cantidad-productos {
+  margin: 0.4em 0;
 }
 
 @media (max-width: 860px) {

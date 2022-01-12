@@ -55,7 +55,7 @@ class FormularioAlta {
         
                 case "textarea":
                     campo.addEventListener("input", () =>{
-                        this.validarTexto(campo)
+                        this.validarTextoArea(campo)
                     })
                     break
         
@@ -90,6 +90,26 @@ class FormularioAlta {
         }
         else if(largo > 40 && campo.id != "imagen"){
             this.mensajesError[this.getIndex(campo)].innerText = "Debe introducir un maximo de 40 caracteres"
+        }
+        else{
+            this.mensajesError[this.getIndex(campo)].innerText = ""
+            this.camposValidos[this.getIndex(campo)] = true
+        }
+        this.mensajesError[this.getIndex(campo)].style.visibility = !this.camposValidos[this.getIndex(campo)] ? "visible" : "hidden"
+        this.validarCampos()
+    }
+
+    validarTextoArea(campo){
+        var largo = campo.value.trim().length
+        this.camposValidos[this.getIndex(campo)] = false
+        if(largo == 0){
+            this.mensajesError[this.getIndex(campo)].innerText = "Campo obligatorio"
+        }
+        else if(largo < 3){
+            this.mensajesError[this.getIndex(campo)].innerText = "Debe introducir un minimo de 3 caracteres"
+        }
+        else if(largo > 1000 && campo.id != "imagen"){
+            this.mensajesError[this.getIndex(campo)].innerText = "Debe introducir un maximo de 1000 caracteres"
         }
         else{
             this.mensajesError[this.getIndex(campo)].innerText = ""
@@ -243,6 +263,8 @@ function renderProductos(productos){
 function desactivarBotonesProductos(bool){
     botonesProducto.forEach(boton =>{
         boton.disabled = bool
+        boton.classList.add(bool ? "invalido" : "valido")
+        boton.classList.remove(bool ? "valido" : "invalido")
     })
 }
 

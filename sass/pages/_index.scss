@@ -6,12 +6,12 @@
 
 .section-cards{
     padding: 1em;
-    margin: 100px 30px;
+    margin: 1.5em 30px;
     text-align: center;
     border-radius: 30px;
     background-attachment: fixed;
     box-shadow: 1px 1px 12px 2px rgba(0,0,0,0.73);
-    background-color: rgba(175, 152, 152, 0.815);
+    background-color: rgba(240, 213, 198, 0.815);
 }
 
 .card-container{
@@ -65,6 +65,10 @@
 
 .div-categoria label{
     margin: 0 20px;
+}
+
+#cantidad-productos{
+    margin: 0.4em 0;
 }
 
 @media (max-width: 860px){
