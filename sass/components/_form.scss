@@ -64,56 +64,45 @@
     }
 
     [type='submit'] {
-        font-size: 30px;
+        font-size: 20px;
         padding: 5px;
-        margin-bottom: 3%;
+        margin: 0 25% 3%;
         width: 50%;
     }
 }
 
-@media (max-width: 600px){
+@media (max-width: 1200px){
     
-.contacto_form,
-.alta_form{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-
-    
-    & h1{
-        font-size: 1.5em;
-    }
-
-    & label,
-    & input,
-    & select,
-    & textarea{
-        font-size: 1em;
-        margin: 0;
-        
-    }
-
-    .div_form{
-        font-size: 1em;
+    .contacto_form,
+    .alta_form{
         display: flex;
         flex-direction: column;
+        align-content: center;
+        margin: 0 5%;
+
+        .div_form,
+        .div_error{
         justify-content: center;
-        margin: 2% 15%;
+        }
+
+        & .div_form{
+            flex-direction: column;
+        }
+
+        & .mensaje_error{
+            width: max-content;
+            margin: 0;
+        }
+
+        & label,
+        & input,
+        & select,
+        & textarea{
+            width: 100%;
+        }
+
         
     }
-
-    [type='checkbox']{
-        width: 20px;
-        height: 20px;
-        margin-left: 40%;
-    }
-
-    [type='submit'] {
-        font-size: 1em;
-        width: 6em;
-        margin-left: 25%;
-    }
-}
 }
 
 .lista_container{

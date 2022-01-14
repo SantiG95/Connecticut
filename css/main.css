@@ -90,6 +90,14 @@ footer p {
   .alta_mensaje {
     font-size: 1.2em;
   }
+
+  .alta_form h1 {
+    font-size: 1.3em;
+  }
+
+  .div_form label {
+    font-size: 1em;
+  }
 }
 .card {
   outline: none;
@@ -361,50 +369,41 @@ footer p {
 }
 .contacto_form [type=submit],
 .alta_form [type=submit] {
-  font-size: 30px;
+  font-size: 20px;
   padding: 5px;
-  margin-bottom: 3%;
+  margin: 0 25% 3%;
   width: 50%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .contacto_form,
 .alta_form {
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin: 0 5%;
   }
-  .contacto_form h1,
-.alta_form h1 {
-    font-size: 1.5em;
+  .contacto_form .div_form,
+.contacto_form .div_error,
+.alta_form .div_form,
+.alta_form .div_error {
+    justify-content: center;
+  }
+  .contacto_form .div_form,
+.alta_form .div_form {
+    flex-direction: column;
+  }
+  .contacto_form .mensaje_error,
+.alta_form .mensaje_error {
+    width: max-content;
+    margin: 0;
   }
   .contacto_form label, .contacto_form input, .contacto_form select, .contacto_form textarea,
 .alta_form label,
 .alta_form input,
 .alta_form select,
 .alta_form textarea {
-    font-size: 1em;
-    margin: 0;
-  }
-  .contacto_form .div_form,
-.alta_form .div_form {
-    font-size: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 2% 15%;
-  }
-  .contacto_form [type=checkbox],
-.alta_form [type=checkbox] {
-    width: 20px;
-    height: 20px;
-    margin-left: 40%;
-  }
-  .contacto_form [type=submit],
-.alta_form [type=submit] {
-    font-size: 1em;
-    width: 6em;
-    margin-left: 25%;
+    width: 100%;
   }
 }
 .lista_container {
