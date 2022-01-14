@@ -66,19 +66,17 @@ footer p {
   font-size: 1.5em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #categorias__text {
-    font-size: 2.1em;
+    font-size: 2em;
+  }
+
+  .div-categoria label {
+    font-size: 1em;
   }
 
   #cantidad-productos {
     font-size: 1em;
-  }
-
-  #consola-text,
-#juegos-text,
-#amiibo-text {
-    font-size: 2em;
   }
 
   #main_nosotros h1 {
@@ -180,9 +178,10 @@ footer p {
   width: 60%;
   justify-content: space-around;
 }
-@media (max-width: 375px) {
-  .card label {
-    font-size: 0.4em;
+@media (max-width: 1010px) {
+  .card {
+    width: 200px;
+    height: auto;
   }
 }
 
@@ -619,6 +618,46 @@ footer p {
   color: white;
 }
 
+#categorias {
+  text-align: center;
+  border: #8d7b7b 2px solid;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+#apartados-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.divisor-categoria {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.div-categoria {
+  display: flex;
+  flex-direction: row;
+}
+
+.div-categoria label {
+  margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  #apartados-container a {
+    width: 40%;
+    padding: 0%;
+  }
+
+  #apartados-container {
+    flex-direction: column;
+  }
+}
 /*********************************
             HEADER
 *********************************/
@@ -954,55 +993,10 @@ footer #logo_footer {
   margin-top: 10px;
 }
 
-@media (min-width: 1200px) {
-  .card-container {
-    min-width: 230px;
-  }
-}
-#categorias {
-  text-align: center;
-  border: #8d7b7b 2px solid;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-}
-
-#apartados-container {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.divisor-categoria {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 15px 0;
-}
-
-.div-categoria {
-  display: flex;
-  flex-direction: row;
-}
-
-.div-categoria label {
-  margin: 0 20px;
-}
-
 #cantidad-productos {
   margin: 0.4em 0;
 }
 
-@media (max-width: 860px) {
-  #categorias {
-    padding: 10px;
-  }
-
-  #apartados-container a {
-    width: 40%;
-    padding: 0%;
-  }
-}
 .alta_mensaje {
   margin: 5% 5%;
 }

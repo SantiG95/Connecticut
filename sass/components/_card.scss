@@ -104,12 +104,10 @@
 
     
 
-    @media (max-width: 375px){
-        label{
-            font-size: 0.4em;
-        }
-
-        
+    
+    @media (max-width: 1010px){
+        width: 200px;
+        height: auto;
     }
 }
 

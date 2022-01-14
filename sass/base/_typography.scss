@@ -44,20 +44,17 @@ footer p{
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 768px){
     #categorias__text{
-        font-size: 2.1em;
+        font-size: 2em;
+    }
+
+    .div-categoria label{
+        font-size: 1em;
     }
     
     #cantidad-productos{
         font-size: 1em;
-    }
-
-    #consola-text,
-    #juegos-text,
-    #amiibo-text{
-        font-size: 2em;
-        
     }
 
     #main_nosotros h1{
