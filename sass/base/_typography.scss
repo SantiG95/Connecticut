@@ -1,21 +1,21 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
 #categorias__text{
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 60px;
 }
 
 
 #cantidad-productos{
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 40px;
     color: black;
 }
 
 .alta_mensaje{
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 35px;
     text-align: center;
 }
@@ -36,7 +36,7 @@ footer p{
 }
 
 .lista_container{
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 .divisor-categoria label{
@@ -75,5 +75,14 @@ footer p{
 
     .div_form label{
         font-size: 1em;
+    }
+
+    .section-carrito{
+        font-size: 1em;
+    }
+
+    #tabla-carrito{
+        font-size: 1em;
+        
     }
 }

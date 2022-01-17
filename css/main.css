@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 *,
 *::after,
@@ -27,18 +28,18 @@ html {
 }
 
 #categorias__text {
-  font-family: "Roboto", cursive;
+  font-family: "Roboto", sans-serif;
   font-size: 60px;
 }
 
 #cantidad-productos {
-  font-family: "Roboto", cursive;
+  font-family: "Roboto", sans-serif;
   font-size: 40px;
   color: black;
 }
 
 .alta_mensaje {
-  font-family: "Roboto", cursive;
+  font-family: "Roboto", sans-serif;
   font-size: 35px;
   text-align: center;
 }
@@ -59,7 +60,7 @@ footer p {
 }
 
 .lista_container {
-  font-family: "Roboto", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 .divisor-categoria label {
@@ -96,6 +97,14 @@ footer p {
   }
 
   .div_form label {
+    font-size: 1em;
+  }
+
+  .section-carrito {
+    font-size: 1em;
+  }
+
+  #tabla-carrito {
     font-size: 1em;
   }
 }
@@ -556,7 +565,7 @@ footer p {
   overflow-y: auto;
   display: none;
   position: fixed;
-  background-color: #f1f2f3;
+  background-color: #fdefd6;
   z-index: 1;
   top: 100px;
   left: 100px;
@@ -568,8 +577,18 @@ footer p {
   display: block;
 }
 .section-carrito .vacio {
-  display: flex;
-  justify-content: center;
+  left: 30%;
+  top: 30%;
+}
+.section-carrito #carrito-fondo {
+  width: 20%;
+  height: auto;
+  position: fixed;
+  bottom: 15%;
+  right: 15%;
+  transform: rotate(15deg);
+  filter: opacity(15%);
+  z-index: -1;
 }
 .section-carrito table {
   width: 95%;
@@ -617,6 +636,45 @@ footer p {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .section-carrito {
+    left: 50px;
+    right: 50px;
+  }
+  .section-carrito #carrito-fondo {
+    width: 20%;
+    height: auto;
+    position: fixed;
+    bottom: 0%;
+    top: 70%;
+    right: 15%;
+    transform: rotate(15deg);
+    filter: opacity(15%);
+    z-index: -1;
+  }
+  .section-carrito table {
+    position: relative;
+    top: 10%;
+  }
+  .section-carrito table, .section-carrito th, .section-carrito td {
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+  }
+  .section-carrito button.btn__enviarCarrito {
+    position: fixed;
+    right: 15%;
+  }
+  .section-carrito #delete-icon {
+    cursor: pointer;
+    width: 75%;
+  }
+  .section-carrito div {
+    position: fixed;
+    left: 10%;
+    top: 13%;
+  }
+}
 #categorias {
   text-align: center;
   border: #8d7b7b 2px solid;

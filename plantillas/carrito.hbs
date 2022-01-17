@@ -1,7 +1,7 @@
 {{#if carrito.length }}
     <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>
     <div></div>
-    <table>
+    <table id="tabla-carrito">
         <tr>
             <th>Imagen</th>
             <th>Nombre</th>
@@ -39,3 +39,4 @@
         <h2>El carrito está vacío</h2>
     </div>
 {{/if}}
+<img id="carrito-fondo" src="../img/carrito.png" alt="">

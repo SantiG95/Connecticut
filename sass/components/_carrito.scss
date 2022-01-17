@@ -4,22 +4,34 @@
     overflow-y: auto;
     display: none;
     position: fixed;
-    background-color: #f1f2f3;
+    background-color: #fdefd6;
     z-index: 1;
     top: 100px;
     left: 100px;
     right: 100px;
     bottom: 100px;
     box-shadow: .3em .3em 10em .3em rgba(0, 0, 0, 1);
-
     
     &--visible {
         display: block;
     }
 
     & .vacio {
-        display: flex;
-        justify-content: center;
+        //display: flex;
+        //justify-content: center;
+        left: 30%;
+        top: 30%;
+    }
+
+    & #carrito-fondo{
+        width: 20%;
+        height: auto;
+        position: fixed;
+        bottom: 15%;
+        right: 15%;
+        transform: rotate(15deg);
+        filter: opacity(15%);
+        z-index: -1;
     }
 
     table {
@@ -79,3 +91,52 @@
 }
 
 
+@media (max-width: 768px) {
+    .section-carrito {
+        left: 50px;
+        right: 50px;
+
+        & #carrito-fondo{
+            width: 20%;
+            height: auto;
+            position: fixed;
+            bottom: 0%;
+            top: 70%;
+            right: 15%;
+            transform: rotate(15deg);
+            filter: opacity(15%);
+            z-index: -1;
+        }
+        
+    
+        table {
+            position: relative;
+            top: 10%;
+        }
+    
+        table,th,td {
+            border-collapse: collapse;
+            padding: 5px;
+            text-align: center;
+        }
+    
+        
+    
+        button.btn__enviarCarrito {
+            position: fixed;
+            right: 15%;
+        }
+    
+        #delete-icon{
+            cursor: pointer;
+            width: 75%;
+        }
+    
+        div{
+            position: fixed;
+            left: 10%;
+            top: 13%;
+        }
+    
+    }
+}
